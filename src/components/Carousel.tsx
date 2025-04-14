@@ -117,7 +117,7 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
       </AnimatePresence>
 
       {/* Navigation Arrows */}
-      <div className="absolute inset-0 flex items-center justify-between px-2 sm:px-4">
+      <div className="hidden md:flex absolute inset-0 items-center justify-between px-2 sm:px-4">
         <button
           onClick={handlePrevious}
           className="p-1 sm:p-2 rounded-full  text-black cursor-pointer z-10 group  transition-colors"
@@ -142,8 +142,8 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
             onClick={() => handleDotClick(index)}
             className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
               index === currentIndex 
-                ? "bg-white w-6 sm:w-8" 
-                : "bg-white/50 hover:bg-white/70 w-2 sm:w-2.5"
+                ? "bg-black w-6 sm:w-8" 
+                : "bg-black hover:bg-white/70 w-2 sm:w-2.5"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -251,7 +251,7 @@ export default function TestimonialCarousel() {
   ];
 
   return (
-    <div className="w-full bg-gray-50 dark:bg-gray-950 py-8 sm:py-12 md:py-16 px-3 sm:px-4">
+    <div className="w-full dark:bg-gray-950 py-8 sm:py-12 md:py-16 px-3 sm:px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">Client Testimonials</h2>

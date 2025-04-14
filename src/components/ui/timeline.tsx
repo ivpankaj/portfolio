@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -19,19 +18,30 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
+    // Set initial height
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
+      setHeight(ref.current.getBoundingClientRect().height);
     }
-  }, [ref]);
+
+    // Update height on resize
+    const handleResize = () => {
+      if (ref.current) {
+        setHeight(ref.current.getBoundingClientRect().height);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 20%", "end 80%"],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  // Transform for the line progress
+  const lineHeight = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const lineOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
 
   return (
     <div
@@ -58,7 +68,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
             </div>
@@ -71,20 +81,20 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             </div>
           </div>
         ))}
+        
+        {/* Background line */}
         <div
+          className="absolute md:left-8 left-8 top-0 h-full w-[2px] bg-neutral-200 dark:bg-neutral-700 opacity-40"
+        />
+        
+        {/* Animated progress line */}
+        <motion.div
           style={{
-            height: height + "px",
+            height: lineHeight,
+            opacity: lineOpacity,
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
-        >
-          <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-black to-transparent from-[0%] via-[10%] rounded-full"
-          />
-        </div>
+          className="absolute md:left-8 left-8 top-0 w-[2px] bg-black dark:bg-white"
+        />
       </div>
     </div>
   );

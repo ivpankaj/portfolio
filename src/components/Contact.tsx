@@ -77,13 +77,13 @@ export default function ContactPage() {
   };
 
   return (
-    <div className={`min-h-screen ${themeClasses.primary} font-sans transition-colors duration-500`}>
+    <div className={` ${themeClasses.primary} font-sans transition-colors duration-500`}>
    
       
       <div className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Hero section */}
-          <div className="text-center mb-16 md:mb-32">
+          <div className="text-center">
             <h1 className={`text-4xl md:text-7xl font-bold mb-6 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
               Let&apos;s start a <span className="relative">
                 conversation

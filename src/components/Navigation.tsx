@@ -91,7 +91,7 @@ export default function Navigation({
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className={`fixed top-20 left-1/2 transform -translate-x-1/2 w-11/12 ${themeClasses.accent} rounded-lg p-4 z-40 md:hidden animate-fadeIn shadow-lg`}
+          className={`fixed top-20 left-1/2 transform -translate-x-1/2 w-11/12 ${themeClasses.accent} rounded-lg p-4 z-50 md:hidden animate-fadeIn shadow-lg`}
         >
           <div className="flex flex-col space-y-4">
             <Link
