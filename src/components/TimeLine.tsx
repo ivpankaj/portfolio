@@ -11,7 +11,7 @@ export function TimelineDemo() {
             Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>
           <div className="space-y-4">
-            <div className="bg-neutral-50 dark:bg-neutral-900 p-4 rounded-lg border border-neutral-200 dark:border-neutral-800">
+            <div className=" dark:bg-neutral-900 p-4 rounded-lg border border-black dark:border-neutral-800">
               <h4 className="font-medium text-neutral-900 dark:text-white mb-2">Key Achievements</h4>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -44,7 +44,7 @@ export function TimelineDemo() {
             Started developing core UI components and design system fundamentals
           </p>
           <div className="space-y-4">
-            <div className="bg-neutral-50 dark:bg-neutral-900 p-4 rounded-lg border border-neutral-200 dark:border-neutral-800">
+            <div className="dark:bg-neutral-900 p-4 rounded-lg border border-black dark:border-neutral-800">
               <h4 className="font-medium text-neutral-900 dark:text-white mb-2">Development Highlights</h4>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -77,7 +77,7 @@ export function TimelineDemo() {
             Latest updates and releases for Aceternity
           </p>
           <div className="space-y-4">
-            <div className="bg-neutral-50 dark:bg-neutral-900 p-4 rounded-lg border border-neutral-200 dark:border-neutral-800">
+            <div className="dark:bg-neutral-900 p-4 rounded-lg border border-black dark:border-neutral-800">
               <h4 className="font-medium text-neutral-900 dark:text-white mb-2">Recent Updates</h4>
               <div className="space-y-3">
                 <div className="flex items-start">

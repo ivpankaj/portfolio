@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { MessageCircle, Sun, Moon, X, Menu } from "lucide-react";
+import { Sun, Moon, X, Menu } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavigationProps {
   darkMode: boolean;
@@ -22,13 +23,19 @@ export default function Navigation({
     <>
       {/* Floating navbar */}
       <nav
-        className={`${themeClasses.accent} fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-10/12 lg:w-3/4 rounded-full py-3 px-6 z-50 flex items-center justify-between shadow-lg backdrop-blur-md bg-opacity-80`}
+        className={`${themeClasses.accent} fixed top-4 left-1/2 -translate-x-1/2 w-11/12 md:w-10/12 lg:w-3/4 rounded-full py-3 px-6 z-50 flex items-center justify-between shadow-lg backdrop-blur-md bg-opacity-80`}
       >
         <div className="flex items-center">
           <div
-            className={`w-10 h-10 ${themeClasses.highlight} rounded-full flex items-center justify-center mr-3`}
+            className="w-10 h-10  flex items-center justify-center mr-3"
           >
-            <MessageCircle size={20} />
+           <Image
+              src="/pankaj__1_-removebg-preview.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className=""
+           />
           </div>
           <Link
             href="/"
@@ -80,7 +87,7 @@ export default function Navigation({
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`${themeClasses.highlight} p-2 rounded-full md:hidden transition-all duration-300`}
+            className={`${themeClasses.highlight} p-2  md:hidden transition-all duration-300`}
             aria-label={menuOpen ? "Close Menu" : "Open Menu"}
           >
             {menuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -91,7 +98,7 @@ export default function Navigation({
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className={`fixed top-20 left-1/2 transform -translate-x-1/2 w-11/12 ${themeClasses.accent} rounded-lg p-4 z-50 md:hidden animate-fadeIn shadow-lg`}
+          className={`fixed top-20 left-1/2 -translate-x-1/2 w-11/12 ${themeClasses.accent} rounded-lg p-4 z-50 md:hidden animate-fadeIn shadow-lg`}
         >
           <div className="flex flex-col space-y-4">
             <Link

@@ -24,7 +24,7 @@ export default function FAQSection({ themeClasses }: FAQSectionProps) {
         {faqs.map((faq, index) => (
           <div 
             key={index}
-            className={`mb-4 border ${themeClasses.border} rounded-lg overflow-hidden transition-all duration-300`}
+            className={`mb-4 border border-black rounded-lg overflow-hidden transition-all duration-300`}
           >
             <button 
               className={`w-full text-left p-4 flex justify-between items-center font-medium ${activeFAQ === index ? 'bg-opacity-10 bg-white' : ''}`}
