@@ -15,7 +15,7 @@ export default function Statistics({ themeClasses, isVisible }: StatisticsProps)
       {stats.map((stat, index) => (
         <div 
           key={index}
-          className={`p-6 rounded-lg ${themeClasses.accent} text-center transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg`}
+          className={`p-6 rounded-lg border border-black text-center transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg`}
         >
           <div className="text-3xl font-bold mb-2">{stat.value}</div>
           <div className={`${themeClasses.muted} text-sm`}>{stat.label}</div>

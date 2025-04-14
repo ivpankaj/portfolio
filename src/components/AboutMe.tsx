@@ -6,14 +6,14 @@ import { MarqueeDemo } from './TechStack';
 // Assuming MorphingTextDemo is imported from parent component
 // This is a placeholder implementation
 const MorphingTextDemo = () => {
-  const phrases = [
+  const phrases = React.useMemo(() => [
     "Full Stack Development",
     "Web Applications",
     "Mobile Solutions",
     "Backend Systems",
     "API Integration",
     "Database Design"
-  ];
+  ], []);
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [display, setDisplay] = useState("");
@@ -205,30 +205,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      
-      {/* CTA Section */}
-      <div className="py-20 px-4 bg-white text-black">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="mb-8 lg:mb-0 lg:mr-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Something Amazing?</h2>
-              <p className="text-gray-700 max-w-lg">
-                Let&lsquo;s collaborate to create a powerful, scalable solution tailored to your unique business needs.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-black font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition-colors">
-                Request a Quote
-              </button>
-              <button className="border border-black text-black font-bold py-3 px-6 rounded-md hover:bg-white/5 transition-colors">
-                View Portfolio
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Technology Stack */}
       <div className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">

@@ -23,7 +23,7 @@ import {
     mapRef: React.RefObject<HTMLDivElement | null>;
   }
 
-  export default function ContactInfo({ themeClasses, handleSocialClick, mapRef }: ContactInfoProps) {
+  export default function ContactInfo({ themeClasses, handleSocialClick,  }: ContactInfoProps) {
     return (
       <>
         <div className="mb-12">
@@ -115,13 +115,12 @@ import {
           </div>
         </div>
         
-        {/* Interactive Map */}
-        <div 
+
+        {/* <div 
           ref={mapRef}
           className={`rounded-lg overflow-hidden h-64 transform scale-95 opacity-0 transition-all duration-1000 ease-out ${themeClasses.border} border`}
         >
           <div className="w-full h-full bg-gray-800 relative overflow-hidden">
-            {/* Map placeholder with dot pulse animation */}
             <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 ${themeClasses.highlight} rounded-full`}>
               <span className="absolute inset-0 rounded-full animate-ping opacity-75 bg-current"></span>
               <span className="absolute inset-1/4 rounded-full bg-current"></span>
@@ -131,7 +130,7 @@ import {
               <MapPin size={14} className="inline mr-1" /> Company HQ
             </div>
           </div>
-        </div>
+        </div> */}
       </>
     );
   }

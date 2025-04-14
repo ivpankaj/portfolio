@@ -48,7 +48,7 @@ export default function ContactForm({
         </div>
       ) : (
         <>
-          <div className={`${themeClasses.highlight} rounded-lg p-8 shadow-xl mb-8`}>
+          <div className={`border border-black rounded-lg p-8 mb-8`}>
             <h2 className="text-3xl font-bold mb-2">Send us a message</h2>
             <p className={darkMode ? "text-gray-700 mb-6" : "text-gray-400 mb-6"}>
               Fill out the form below and we&apos;ll get back to you as soon as possible.

@@ -90,7 +90,7 @@ export default function ContactPage() {
                 <span className="absolute bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
               </span>
             </h1>
-            <p className={`text-lg md:text-xl max-w-2xl mx-auto ${themeClasses.muted} ${isVisible ? 'animate-fadeInUp animation-delay-200' : 'opacity-0'}`}>
+            <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-4 ${themeClasses.muted} ${isVisible ? 'animate-fadeInUp animation-delay-200' : 'opacity-0'}`}>
               We&apos;re just a message away. Reach out to us for any inquiries, collaborations, or just to say hello.
             </p>
           </div>

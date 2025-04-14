@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+
 import {
   useScroll,
   useTransform,
@@ -81,12 +81,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             </div>
           </div>
         ))}
-        
+
         {/* Background line */}
         <div
           className="absolute md:left-8 left-8 top-0 h-full w-[2px] bg-neutral-200 dark:bg-neutral-700 opacity-40"
         />
-        
+
         {/* Animated progress line */}
         <motion.div
           style={{

@@ -27,7 +27,7 @@ export default function FAQSection({ themeClasses }: FAQSectionProps) {
             className={`mb-4 border ${themeClasses.border} rounded-lg overflow-hidden transition-all duration-300`}
           >
             <button 
-              className={`w-full text-left p-4 flex justify-between items-center font-medium ${activeFAQ === index ? 'bg-opacity-10 bg-current' : ''}`}
+              className={`w-full text-left p-4 flex justify-between items-center font-medium ${activeFAQ === index ? 'bg-opacity-10 bg-white' : ''}`}
               onClick={() => toggleFAQ(index)}
             >
               <span>{faq.question}</span>

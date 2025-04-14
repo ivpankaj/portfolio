@@ -25,7 +25,7 @@ export default function CallToAction({ themeClasses, isVisible }: CallToActionPr
           Call Us Now
         </button>
         <button 
-          className={`border ${themeClasses.border} py-3 px-8 rounded-md text-lg font-medium hover:bg-opacity-10 hover:bg-current transition-all duration-300 flex items-center justify-center`}
+          className={`border ${themeClasses.border} py-3 px-8 rounded-md text-lg font-medium hover:bg-opacity-10 hover:bg-white transition-all duration-300 flex items-center justify-center`}
         >
           <Users size={18} className="mr-2" />
           Schedule Meeting
