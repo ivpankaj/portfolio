@@ -1,0 +1,284 @@
+"use client"
+import React, { useState, useEffect } from 'react';
+import { Code, Database, Layout, Smartphone, Globe, Server, Zap, TouchpadOff } from 'lucide-react';
+import { MarqueeDemo } from './TechStack';
+
+// Assuming MorphingTextDemo is imported from parent component
+// This is a placeholder implementation
+const MorphingTextDemo = () => {
+  const phrases = [
+    "Full Stack Development",
+    "Web Applications",
+    "Mobile Solutions",
+    "Backend Systems",
+    "API Integration",
+    "Database Design"
+  ];
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [display, setDisplay] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const current = phrases[currentIndex];
+      
+      if (!isDeleting) {
+        setDisplay(current.substring(0, display.length + 1));
+        if (display === current) {
+          setIsDeleting(true);
+          clearInterval(interval);
+          setTimeout(() => setInterval(() => {}, 1000), 1000);
+        }
+      } else {
+        setDisplay(current.substring(0, display.length - 1));
+        if (display === '') {
+          setIsDeleting(false);
+          setCurrentIndex((currentIndex + 1) % phrases.length);
+        }
+      }
+    }, 100);
+    
+    return () => clearInterval(interval);
+  }, [currentIndex, display, isDeleting, phrases]);
+  
+  return (
+    <div className="font-bold text-3xl md:text-5xl lg:text-6xl text-black">
+      <span>{display}</span>
+      <span className="animate-pulse">|</span>
+    </div>
+  );
+};
+
+interface ServiceCardProps {
+  icon: React.ComponentType<{ size: number; className?: string }>;
+  title: string;
+  description: string;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, description }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
+  return (
+    <div 
+      className={`bg-white border border-gray-800 rounded-lg p-6 transition-all duration-300 h-full ${
+        isHovered ? "transform -translate-y-2 shadow-lg shadow-white/5" : ""
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="flex items-center justify-center mb-4 bg-white/10 p-3 rounded-full w-16 h-16">
+        <Icon size={24} className="text-black" />
+      </div>
+      <h3 className="text-xl font-bold text-black mb-3">{title}</h3>
+      <p className="text-gray-400">{description}</p>
+    </div>
+  );
+};
+
+const Services = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  const parallaxOffset = scrollPosition * 0.1;
+  
+  const services = [
+    {
+      icon: Globe,
+      title: "Web Development",
+      description: "Modern, responsive websites and web applications built with React, Next.js, and other cutting-edge technologies."
+    },
+    {
+      icon: Server,
+      title: "Backend Solutions",
+      description: "Robust server-side applications using Node.js, Express, Django, or Laravel with secure authentication systems."
+    },
+    {
+      icon: Database,
+      title: "Database Design",
+      description: "Efficient database architecture using SQL or NoSQL solutions like MongoDB, PostgreSQL, or Firebase."
+    },
+    {
+      icon: Code,
+      title: "API Development",
+      description: "RESTful and GraphQL APIs that connect your applications seamlessly with third-party services."
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Development",
+      description: "Cross-platform mobile applications using React Native or native solutions for iOS and Android."
+    },
+    {
+      icon: TouchpadOff,
+      title: "DevOps & CI/CD",
+      description: "Automated testing, deployment pipelines, and cloud infrastructure setup for seamless delivery."
+    },
+    {
+      icon: Layout,
+      title: "UI/UX Design",
+      description: "User-centered interfaces with intuitive experiences that keep your users engaged and satisfied."
+    },
+    {
+      icon: Zap,
+      title: "Performance Optimization",
+      description: "Speed up your applications with code optimization, caching strategies, and infrastructure improvements."
+    }
+  ];
+  
+  return (
+    <div className="bg-white text-black min-h-screen">
+      {/* Hero Section with Parallax Effect */}
+      <div 
+        className="relative overflow-hidden py-20 md:py-32 px-4"
+      
+      >
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "url('/api/placeholder/1920/1080')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            transform: `translateY(${parallaxOffset}px)`
+          }}
+        />
+        
+        <div className="container mx-auto relative z-10">
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-4 text-gray-400 text-sm md:text-base uppercase tracking-wider">
+              Hire me for..
+            </div>
+            
+            <div className="h-20">
+              <MorphingTextDemo />
+            </div>
+            
+            <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg md:text-xl">
+              Transforming ideas into exceptional digital experiences with cutting-edge technologies and best practices.
+            </p>
+            
+            <div className="mt-10">
+              <button className="bg-white text-black font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition-colors mr-4">
+                Get Started
+              </button>
+              <button className="border border-white text-black font-bold py-3 px-6 rounded-md hover:bg-white/10 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Services Grid */}
+      <div className="py-20 px-4 ">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Full Stack Services</h2>
+            <div className="h-1 w-20 bg-white mx-auto"></div>
+            <p className="mt-6 max-w-2xl mx-auto text-gray-400">
+              From front-end development to database architecture, I deliver complete solutions 
+              for businesses of all sizes.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="opacity-0 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
+              >
+                <ServiceCard 
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* CTA Section */}
+      <div className="py-20 px-4 bg-white text-black">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="mb-8 lg:mb-0 lg:mr-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Something Amazing?</h2>
+              <p className="text-gray-700 max-w-lg">
+                Let&lsquo;s collaborate to create a powerful, scalable solution tailored to your unique business needs.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-white text-black font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition-colors">
+                Request a Quote
+              </button>
+              <button className="border border-black text-black font-bold py-3 px-6 rounded-md hover:bg-white/5 transition-colors">
+                View Portfolio
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Technology Stack */}
+      <div className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technology Stack I worked with..</h2>
+            <div className="h-1 w-20 bg-white mx-auto"></div>
+            <p className="mt-6 max-w-2xl mx-auto text-gray-400">
+              I work with the latest technologies to deliver high-quality, scalable applications.
+            </p>
+          </div>
+          
+     <MarqueeDemo/>
+     
+        </div>
+      </div>
+      
+      {/* Footer */}
+      <footer className="py-12 px-4 bg-white border-t border-gray-800">
+        <div className="container mx-auto text-center">
+          <p className="text-gray-400">
+            &copy; {new Date().getFullYear()} | Premium Full Stack Development Services
+          </p>
+          <div className="mt-4 flex justify-center space-x-4">
+            <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              GitHub
+            </a>
+            <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              LinkedIn
+            </a>
+            <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              Twitter
+            </a>
+            <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              Contact
+            </a>
+          </div>
+        </div>
+      </footer>
+      
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+          animation: fadeIn 0.6s ease-out;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default Services;
