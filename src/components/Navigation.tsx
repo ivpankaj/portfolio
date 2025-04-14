@@ -36,10 +36,10 @@ export default function Navigation({
 
         <div className="hidden md:flex items-center space-x-8">
           <Link
-            href="/"
+            href="/projects"
             className="font-medium hover:opacity-70 transition-opacity"
           >
-            Home
+            Projects
           </Link>
           <Link
             href="/about"
@@ -89,10 +89,10 @@ export default function Navigation({
         >
           <div className="flex flex-col space-y-4">
             <Link
-              href="/"
+              href="/projects"
               className="font-medium hover:opacity-70 transition-opacity"
             >
-              Home
+              Projects
             </Link>
             <Link
               href="/about"
