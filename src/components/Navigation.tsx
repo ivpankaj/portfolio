@@ -1,4 +1,3 @@
-// src/components/layout/Navigation.js
 import { useState } from "react";
 import { MessageCircle, Sun, Moon, X, Menu } from "lucide-react";
 import Link from "next/link";
@@ -31,7 +30,14 @@ export default function Navigation({
           >
             <MessageCircle size={20} />
           </div>
-          <span className="font-bold text-lg md:text-xl">Pankaj</span>
+          <Link
+            href="/"
+            className="text-xl font-bold text-gray-800 dark:text-gray-200"
+          >
+            <span className="font-bold text-lg md:text-xl cursor-pointer">
+              Pankaj
+            </span>
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
