@@ -4,6 +4,7 @@
 import Navigation from "@/components/Navigation";
 import { useTheme } from "@/hooks/useTheme";
 import React from "react";
+import { Footer } from "./Footer";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const { darkMode, themeClasses, toggleTheme } = useTheme();
@@ -16,6 +17,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         themeClasses={themeClasses}
       />
       {children}
+      <Footer/>
     </>
   );
 };
