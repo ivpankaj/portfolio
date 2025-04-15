@@ -43,7 +43,7 @@ const MorphingTextDemo = () => {
   }, [currentIndex, display, isDeleting, phrases]);
   
   return (
-    <div className="font-bold text-3xl md:text-5xl lg:text-6xl text-black">
+    <div className="font-bold text-3xl md:text-5xl lg:text-6xl text-gray-900 dark:text-white">
       <span>{display}</span>
       <span className="animate-pulse">|</span>
     </div>
@@ -61,17 +61,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
   
   return (
     <div 
-      className={`bg-white border border-gray-800 rounded-lg p-6 transition-all duration-300 h-full ${
-        isHovered ? "transform -translate-y-2 shadow-lg shadow-white/5" : ""
+      className={`bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 transition-all duration-300 h-full ${
+        isHovered ? "transform -translate-y-2 shadow-lg shadow-gray-300/20 dark:shadow-black/20" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex items-center justify-center mb-4 bg-white/10 p-3 rounded-full w-16 h-16">
-        <Icon size={24} className="text-black" />
+      <div className="flex items-center justify-center mb-4 bg-gray-100 dark:bg-gray-700 p-3 rounded-full w-16 h-16">
+        <Icon size={24} className="text-gray-900 dark:text-white" />
       </div>
-      <h3 className="text-xl font-bold text-black mb-3">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{description}</p>
     </div>
   );
 };
@@ -134,7 +134,7 @@ const Services = () => {
   ];
   
   return (
-    <div className="bg-white text-black min-h-screen">
+    <div className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white min-h-screen">
       {/* Hero Section with Parallax Effect */}
       <div 
         className="relative overflow-hidden py-20 md:py-32 px-4"
@@ -152,7 +152,7 @@ const Services = () => {
         
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col items-center text-center">
-            <div className="mb-4 text-gray-400 text-sm md:text-base uppercase tracking-wider">
+            <div className="mb-4 text-gray-600 dark:text-gray-400 text-sm md:text-base uppercase tracking-wider">
               Hire me for..
             </div>
             
@@ -160,7 +160,7 @@ const Services = () => {
               <MorphingTextDemo />
             </div>
             
-            <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg md:text-xl">
+            <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg md:text-xl">
               Transforming ideas into exceptional digital experiences with cutting-edge technologies and best practices.
             </p>
           
@@ -169,12 +169,12 @@ const Services = () => {
       </div>
       
       {/* Services Grid */}
-      <div className=" px-4 ">
+      <div className="px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Full Stack Services</h2>
-            <div className="h-1 w-20 bg-white mx-auto"></div>
-            <p className="mt-6 max-w-2xl mx-auto text-gray-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Comprehensive Full Stack Services</h2>
+            <div className="h-1 w-20 bg-gray-300 dark:bg-gray-700 mx-auto"></div>
+            <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
               From front-end development to database architecture, I deliver complete solutions 
               for businesses of all sizes.
             </p>
@@ -197,12 +197,12 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="py-20 px-4 bg-white">
+      <div className="py-20 px-4 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technology Stack I worked with..</h2>
-            <div className="h-1 w-20 bg-white mx-auto"></div>
-            <p className="mt-6 max-w-2xl mx-auto text-gray-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Technology Stack I worked with..</h2>
+            <div className="h-1 w-20 bg-gray-300 dark:bg-gray-700 mx-auto"></div>
+            <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
               I work with the latest technologies to deliver high-quality, scalable applications.
             </p>
           </div>

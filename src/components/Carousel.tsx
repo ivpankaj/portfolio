@@ -94,7 +94,7 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
 
   return (
     <div 
-      className="relative w-full max-w-5xl mx-auto overflow-hidden h-64 sm:h-72 md:h-80 lg:h-96 mb-6 md:mb-10 rounded-lg md:rounded-xl border border-black"
+      className="relative w-full max-w-5xl mx-auto overflow-hidden h-64 sm:h-72 md:h-80 lg:h-96 mb-6 md:mb-10 rounded-lg md:rounded-xl border border-gray-200 dark:border-gray-700"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -110,7 +110,7 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
           initial="incoming"
           animate="active"
           exit="outgoing"
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full bg-white dark:bg-gray-800"
         >
           {slides[currentIndex]}
         </motion.div>
@@ -120,14 +120,14 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
       <div className="hidden md:flex absolute inset-0 items-center justify-between px-2 sm:px-4">
         <button
           onClick={handlePrevious}
-          className="p-1 sm:p-2 rounded-full  text-black cursor-pointer z-10 group  transition-colors"
+          className="p-1 sm:p-2 rounded-full bg-white/60 dark:bg-gray-800/60 text-gray-800 dark:text-white hover:bg-white/90 dark:hover:bg-gray-700/90 cursor-pointer z-10 group transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft size={20} className="group-hover:scale-110 transition-transform" />
         </button>
         <button
           onClick={handleNext}
-          className="p-1 sm:p-2 rounded-full  text-black cursor-pointer z-10 group  transition-colors"
+          className="p-1 sm:p-2 rounded-full bg-white/60 dark:bg-gray-800/60 text-gray-800 dark:text-white hover:bg-white/90 dark:hover:bg-gray-700/90 cursor-pointer z-10 group transition-colors"
           aria-label="Next slide"
         >
           <ChevronRight size={20} className="group-hover:scale-110 transition-transform" />
@@ -142,8 +142,8 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
             onClick={() => handleDotClick(index)}
             className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
               index === currentIndex 
-                ? "bg-black w-6 sm:w-8" 
-                : "bg-black hover:bg-white/70 w-2 sm:w-2.5"
+                ? "bg-gray-800 dark:bg-white w-6 sm:w-8" 
+                : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 w-2 sm:w-2.5"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -171,7 +171,7 @@ const TestimonialSlide = ({ name, role, company, quote, rating }: TestimonialSli
         <Star 
           key={i} 
           size={16} 
-          className={`${i < rating ? "text-yellow-400 fill-yellow-400" : "text-black"} sm:w-5 sm:h-5`} 
+          className={`${i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300 dark:text-gray-600"} sm:w-5 sm:h-5`} 
         />
       );
     }
@@ -192,18 +192,18 @@ const TestimonialSlide = ({ name, role, company, quote, rating }: TestimonialSli
             {/* Rating */}
             <div className="flex justify-center md:justify-start items-center mb-2 md:mb-4">
               {renderStars(rating)}
-              <span className="ml-1 sm:ml-2 text-black text-sm sm:text-base font-semibold">{rating}.0</span>
+              <span className="ml-1 sm:ml-2 text-gray-800 dark:text-gray-200 text-sm sm:text-base font-semibold">{rating}.0</span>
             </div>
             
             {/* Quote */}
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black italic mb-3 sm:mb-4 md:mb-6 font-light line-clamp-3 sm:line-clamp-4 md:line-clamp-none">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 italic mb-3 sm:mb-4 md:mb-6 font-light line-clamp-3 sm:line-clamp-4 md:line-clamp-none">
               &ldquo;{quote}&rdquo;
             </p>
             
             {/* Author Info */}
             <div>
-              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-black mb-0 sm:mb-1">{name}</h3>
-              <p className="text-black text-xs sm:text-sm md:text-base">
+              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-0 sm:mb-1">{name}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base">
                 {role}, {company}
               </p>
             </div>
@@ -251,7 +251,7 @@ export default function TestimonialCarousel() {
   ];
 
   return (
-    <div className="w-full dark:bg-gray-950 py-8 sm:py-12 md:py-16 px-3 sm:px-4">
+    <div className="w-full bg-gray-50 dark:bg-gray-950 py-8 sm:py-12 md:py-16 px-3 sm:px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">Client Testimonials</h2>

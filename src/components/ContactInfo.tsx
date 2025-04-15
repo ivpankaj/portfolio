@@ -11,64 +11,59 @@ import {
     Clock
   } from 'lucide-react';
   
-  interface ThemeClasses {
-    highlight: string;
-    muted: string;
-    border: string;
-  }
+ 
 
   interface ContactInfoProps {
-    themeClasses: ThemeClasses;
+   
     handleSocialClick: (platform: string) => void;
-    mapRef: React.RefObject<HTMLDivElement | null>;
   }
 
-  export default function ContactInfo({ themeClasses, handleSocialClick,  }: ContactInfoProps) {
+  export default function ContactInfo({  handleSocialClick,  }: ContactInfoProps) {
     return (
       <>
-        <div className="mb-12">
+        <div className="mb-12 ">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <div className={`h-1 w-24 ${themeClasses.highlight} mb-6`}></div>
-          <p className={`${themeClasses.muted} text-lg`}>We&apos;d love to hear from you. Fill out the form or reach out through our contact details.</p>
+          <div className={`h-1 w-24  mb-6`}></div>
+          <p className={` text-lg`}>We&apos;d love to hear from you. Fill out the form or reach out through our contact details.</p>
         </div>
         
         <div className="space-y-8 mb-12">
           <div className="flex items-center space-x-4 group">
-            <div className={`${themeClasses.highlight} p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
+            <div className={` p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
               <Phone size={24} />
             </div>
             <div>
-              <h3 className={`text-sm ${themeClasses.muted}`}>Phone</h3>
+              <h3 className={`text-sm `}>Phone</h3>
               <p className="text-lg font-medium">+1 (555) 123-4567</p>
             </div>
           </div>
           
           <div className="flex items-center space-x-4 group">
-            <div className={`${themeClasses.highlight} p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
+            <div className={` p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
               <Mail size={24} />
             </div>
             <div>
-              <h3 className={`text-sm ${themeClasses.muted}`}>Email</h3>
+              <h3 className={`text-sm `}>Email</h3>
               <p className="text-lg font-medium">hello@company.com</p>
             </div>
           </div>
           
           <div className="flex items-center space-x-4 group">
-            <div className={`${themeClasses.highlight} p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
+            <div className={`p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
               <MapPin size={24} />
             </div>
             <div>
-              <h3 className={`text-sm ${themeClasses.muted}`}>Address</h3>
+              <h3 className={`text-sm `}>Address</h3>
               <p className="text-lg font-medium">123 Business Ave, New York, NY 10001</p>
             </div>
           </div>
           
           <div className="flex items-center space-x-4 group">
-            <div className={`${themeClasses.highlight} p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
+            <div className={` p-3 rounded-full transition-all duration-300 group-hover:scale-110`}>
               <Clock size={24} />
             </div>
             <div>
-              <h3 className={`text-sm ${themeClasses.muted}`}>Business Hours</h3>
+              <h3 className={`text-sm `}>Business Hours</h3>
               <p className="text-lg font-medium">Mon-Fri: 9AM-6PM EST</p>
             </div>
           </div>
@@ -79,35 +74,35 @@ import {
           <div className="flex space-x-4">
             <button 
               onClick={() => handleSocialClick('Instagram')}
-              className={`${themeClasses.highlight} p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
+              className={` p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
               aria-label="Instagram"
             >
               <Instagram size={20} />
             </button>
             <button 
               onClick={() => handleSocialClick('Twitter')}
-              className={`${themeClasses.highlight} p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
+              className={` p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
               aria-label="Twitter"
             >
               <Twitter size={20} />
             </button>
             <button 
               onClick={() => handleSocialClick('Facebook')}
-              className={`${themeClasses.highlight} p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
+              className={` p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
               aria-label="Facebook"
             >
               <Facebook size={20} />
             </button>
             <button 
               onClick={() => handleSocialClick('LinkedIn')}
-              className={`${themeClasses.highlight} p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
+              className={` p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </button>
             <button 
               onClick={() => handleSocialClick('GitHub')}
-              className={`${themeClasses.highlight} p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
+              className={` p-3 rounded-full hover:scale-110 transform transition-all duration-300`}
               aria-label="GitHub"
             >
               <Github size={20} />

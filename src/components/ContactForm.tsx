@@ -13,11 +13,6 @@ interface ContactFormProps {
   };
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
-  themeClasses: {
-    highlight: string;
-    border: string;
-  };
-  darkMode: boolean;
 }
 
 export default function ContactForm({ 
@@ -25,14 +20,12 @@ export default function ContactForm({
   setSubmitted, 
   formData, 
   handleInputChange, 
-  handleSubmit, 
-  themeClasses, 
-  darkMode 
+  handleSubmit
 }: ContactFormProps) {
   return (
     <>
       {submitted ? (
-        <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-8 text-center animate-fadeIn">
+        <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-8 text-center">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Check size={32} className="text-green-600" />
           </div>
@@ -48,9 +41,9 @@ export default function ContactForm({
         </div>
       ) : (
         <>
-          <div className={`border border-black rounded-lg p-8 mb-8`}>
+          <div className=" rounded-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-2">Send us a message</h2>
-            <p className={darkMode ? "text-gray-700 mb-6" : "text-gray-400 mb-6"}>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
               Fill out the form below and we&apos;ll get back to you as soon as possible.
             </p>
             
@@ -62,7 +55,7 @@ export default function ContactForm({
                   name="name"
                   value={formData.name} 
                   onChange={handleInputChange}
-                  className={`w-full p-3 border ${themeClasses.border} rounded-md focus:outline-none focus:ring-2 focus:ring-current transition-all bg-transparent`} 
+                  className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent" 
                   placeholder="John Doe"
                   required
                 />
@@ -75,7 +68,7 @@ export default function ContactForm({
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full p-3 border ${themeClasses.border} rounded-md focus:outline-none focus:ring-2 focus:ring-current transition-all bg-transparent`} 
+                  className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent" 
                   placeholder="john@example.com"
                   required
                 />
@@ -87,9 +80,9 @@ export default function ContactForm({
                   <input 
                     type="tel"
                     name="phone"
-                    value={formData.phone} 
+                    value={formData.phone || ''} 
                     onChange={handleInputChange}
-                    className={`w-full p-3 border ${themeClasses.border} rounded-md focus:outline-none focus:ring-2 focus:ring-current transition-all bg-transparent`} 
+                    className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent" 
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -100,7 +93,7 @@ export default function ContactForm({
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className={`w-full p-3 border ${themeClasses.border} rounded-md focus:outline-none focus:ring-2 focus:ring-current transition-all bg-transparent`}
+                    className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent"
                   >
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Support Request">Support Request</option>
@@ -116,7 +109,7 @@ export default function ContactForm({
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className={`w-full p-3 border ${themeClasses.border} rounded-md focus:outline-none focus:ring-2 focus:ring-current transition-all bg-transparent h-32`} 
+                  className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent h-32" 
                   placeholder="How can we help you?"
                   required
                 ></textarea>
@@ -124,14 +117,13 @@ export default function ContactForm({
               
               <button 
                 type="submit" 
-                className={`${darkMode ? "bg-white text-black hover:bg-gray-200" : "bg-black text-white hover:bg-gray-800"} py-3 px-6 rounded-md transition-all duration-300 flex items-center group`}
+                className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 py-3 px-6 rounded-md transition-all duration-300 flex items-center group"
               >
                 Send Message
                 <ChevronRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </form>
           </div>
-        
         </>
       )}
     </>

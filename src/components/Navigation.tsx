@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import {
   Sun,
   Moon,
@@ -11,28 +13,26 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
-interface NavigationProps {
-  darkMode: boolean;
-  toggleTheme: () => void;
-  themeClasses: {
-    accent: string;
-    highlight: string;
-  };
-}
-
-export default function Navigation({
-  darkMode,
-  toggleTheme,
-  themeClasses,
-}: NavigationProps) {
+export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  if (!mounted) return null;
 
   return (
     <>
       {/* Floating navbar */}
       <nav
-        className={`${themeClasses.accent} fixed top-4 left-1/2 -translate-x-1/2 w-11/12 md:w-10/12 lg:w-3/4 rounded-full py-3 px-6 z-50 flex items-center justify-between shadow-lg backdrop-blur-md bg-opacity-80`}
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-11/12 md:w-10/12 lg:w-3/4 rounded-full py-3 px-6 z-50 flex items-center justify-between shadow-lg backdrop-blur-md bg-white/80 dark:bg-zinc-900/80`}
       >
         <div className="flex items-center">
           <div className="w-10 h-10 flex items-center justify-center mr-3">
@@ -54,32 +54,20 @@ export default function Navigation({
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link
-            href="/projects"
-            className="flex items-center gap-1 font-medium hover:opacity-70 transition-opacity"
-          >
+        <div className="hidden md:flex items-center space-x-8 text-gray-800 dark:text-gray-200">
+          <Link href="/projects" className="flex items-center gap-1 font-medium hover:opacity-70">
             <FolderKanban size={16} />
             Projects
           </Link>
-          <Link
-            href="/about"
-            className="flex items-center gap-1 font-medium hover:opacity-70 transition-opacity"
-          >
+          <Link href="/about" className="flex items-center gap-1 font-medium hover:opacity-70">
             <User size={16} />
             About
           </Link>
-          <Link
-            href="/services"
-            className="flex items-center gap-1 font-medium hover:opacity-70 transition-opacity"
-          >
+          <Link href="/services" className="flex items-center gap-1 font-medium hover:opacity-70">
             <Briefcase size={16} />
             Services
           </Link>
-          <Link
-            href="/contact"
-            className="flex items-center gap-1 font-medium hover:opacity-70 transition-opacity"
-          >
+          <Link href="/contact" className="flex items-center gap-1 font-medium hover:opacity-70">
             <Mail size={16} />
             Contact
           </Link>
@@ -89,18 +77,16 @@ export default function Navigation({
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleTheme}
-            className={`${themeClasses.highlight} p-2 rounded-full transition-all duration-300 hover:scale-110`}
-            aria-label={
-              darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
-            }
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-110 transition-transform"
+            aria-label="Toggle Theme"
           >
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`${themeClasses.highlight} p-2 md:hidden transition-all duration-300`}
-            aria-label={menuOpen ? "Close Menu" : "Open Menu"}
+            className="p-2 md:hidden bg-gray-200 dark:bg-gray-700 rounded-full"
+            aria-label="Toggle Menu"
           >
             {menuOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -109,35 +95,21 @@ export default function Navigation({
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div
-          className={`fixed top-20 left-1/2 -translate-x-1/2 w-11/12 ${themeClasses.accent} rounded-lg p-4 z-50 md:hidden animate-fadeIn shadow-lg`}
-        >
+        <div className="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 bg-white dark:bg-zinc-900 rounded-lg p-4 z-50 md:hidden shadow-lg animate-fadeIn text-gray-800 dark:text-gray-200">
           <div className="flex flex-col space-y-4">
-            <Link
-              href="/projects"
-              className="flex items-center gap-2 font-medium hover:opacity-70 transition-opacity"
-            >
+            <Link href="/projects" className="flex items-center gap-2 font-medium hover:opacity-70">
               <FolderKanban size={16} />
               Projects
             </Link>
-            <Link
-              href="/about"
-              className="flex items-center gap-2 font-medium hover:opacity-70 transition-opacity"
-            >
+            <Link href="/about" className="flex items-center gap-2 font-medium hover:opacity-70">
               <User size={16} />
               About
             </Link>
-            <Link
-              href="/services"
-              className="flex items-center gap-2 font-medium hover:opacity-70 transition-opacity"
-            >
+            <Link href="/services" className="flex items-center gap-2 font-medium hover:opacity-70">
               <Briefcase size={16} />
               Services
             </Link>
-            <Link
-              href="/contact"
-              className="flex items-center gap-2 font-medium hover:opacity-70 transition-opacity"
-            >
+            <Link href="/contact" className="flex items-center gap-2 font-medium hover:opacity-70">
               <Mail size={16} />
               Contact
             </Link>

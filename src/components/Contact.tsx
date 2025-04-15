@@ -1,17 +1,13 @@
 // src/app/contact/page.js
 "use client"
-import { useTheme } from '@/hooks/useTheme';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 import Statistics from './Statistics';
 import FAQSection from './FAQSection';
 import CallToAction from './CallToAction';
 
-
 export default function ContactPage() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeForm, setActiveForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -20,30 +16,6 @@ export default function ContactPage() {
     message: '',
     subject: 'General Inquiry'
   });
-  const mapRef = useRef<HTMLDivElement | null>(null);
-  const { darkMode, themeClasses } = useTheme();
-  
-  // Animation timers
-  useEffect(() => {
-    setIsVisible(true);
-    
-    const formTimer = setTimeout(() => {
-      setActiveForm(true);
-    }, 800);
-    
-    // Initialize map animation
-    const mapTimer = setTimeout(() => {
-      if (mapRef.current) {
-        mapRef.current.classList.remove('scale-95', 'opacity-0');
-        mapRef.current.classList.add('scale-100', 'opacity-100');
-      }
-    }, 1500);
-    
-    return () => {
-      clearTimeout(formTimer);
-      clearTimeout(mapTimer);
-    };
-  }, []);
   
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -77,60 +49,51 @@ export default function ContactPage() {
   };
 
   return (
-    <div className={` ${themeClasses.primary} font-sans transition-colors duration-500`}>
-   
-      
-      <div className="py-20 md:py-32 px-6">
+    <div className="font-sans">
+      <div className="py-12 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Hero section */}
-          <div className="text-center">
-            <h1 className={`text-4xl md:text-7xl font-bold mb-6 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
+          <div className="text-center mb-12">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Let&apos;s start a <span className="relative">
                 conversation
                 <span className="absolute bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
               </span>
             </h1>
-            <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-4 ${themeClasses.muted} ${isVisible ? 'animate-fadeInUp animation-delay-200' : 'opacity-0'}`}>
+            <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
               We&apos;re just a message away. Reach out to us for any inquiries, collaborations, or just to say hello.
             </p>
           </div>
           
           {/* Contact Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Left panel - Contact Info */}
-            <div className={`${themeClasses.primary} transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg border border-black p-6">
               <ContactInfo 
-                themeClasses={themeClasses} 
-                handleSocialClick={handleSocialClick} 
-                mapRef={mapRef} 
+                handleSocialClick={handleSocialClick}
               />
             </div>
             
             {/* Right panel - Contact Form */}
-            <div className={`${themeClasses.primary} flex items-center`}>
-              <div className={`w-full transition-all duration-1000 transform ${activeForm ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-                <ContactForm 
-                  submitted={submitted}
-                  setSubmitted={setSubmitted}
-                  formData={formData}
-                  handleInputChange={handleInputChange}
-                  handleSubmit={handleSubmit}
-                  themeClasses={themeClasses}
-                  darkMode={darkMode}
-                />
-              </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg border border-black shadow-md p-6">
+              <ContactForm 
+                submitted={submitted}
+                setSubmitted={setSubmitted}
+                formData={formData}
+                handleInputChange={handleInputChange}
+                handleSubmit={handleSubmit}
+              />
             </div>
           </div>
           
           {/* Statistics Section */}
-          <Statistics themeClasses={themeClasses} isVisible={isVisible} />
-          
+          <Statistics />
           
           {/* FAQ Section */}
-          <FAQSection themeClasses={themeClasses} />
+          <FAQSection />
           
           {/* Call to Action */}
-          <CallToAction themeClasses={themeClasses} isVisible={isVisible} />
+          <CallToAction />
         </div>
       </div>
     </div>
