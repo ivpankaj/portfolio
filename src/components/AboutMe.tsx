@@ -219,29 +219,7 @@ const Services = () => {
      
         </div>
       </div>
-      
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-white border-t border-gray-800">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} | Premium Full Stack Development Services
-          </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <a href="#" className="text-gray-400 hover:text-black transition-colors">
-              GitHub
-            </a>
-            <a href="#" className="text-gray-400 hover:text-black transition-colors">
-              LinkedIn
-            </a>
-            <a href="#" className="text-gray-400 hover:text-black transition-colors">
-              Twitter
-            </a>
-            <a href="#" className="text-gray-400 hover:text-black transition-colors">
-              Contact
-            </a>
-          </div>
-        </div>
-      </footer>
+    
       
       <style jsx>{`
         @keyframes fadeIn {
