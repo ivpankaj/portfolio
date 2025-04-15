@@ -40,38 +40,42 @@ export function Footer() {
             </p>
 
             <div className="flex gap-4">
-              <motion.a
-                href="#"
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-                className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Twitter size={18} />
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-                className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Github size={18} />
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-                className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Linkedin size={18} />
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-                className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Globe size={18} />
-              </motion.a>
+              <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
+                <Link
+                  href="https://twitter.com/yourusername"
+                  target="_blank"
+                  className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  <Twitter size={18} />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
+                <Link
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  <Github size={18} />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
+                <Link
+                  href="https://linkedin.com/in/yourusername"
+                  target="_blank"
+                  className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  <Linkedin size={18} />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
+                <Link
+                  href="https://yourwebsite.com"
+                  target="_blank"
+                  className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  <Globe size={18} />
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -80,44 +84,44 @@ export function Footer() {
             <h3 className="text-sm font-medium text-black dark:text-white mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <motion.a
-                  href="#"
-                  whileHover={{ x: 2 }}
-                  whileTap={{ x: 0 }}
-                  className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  <User size={16} /> About Me
-                </motion.a>
+                <motion.div whileHover={{ x: 2 }} whileTap={{ x: 0 }}>
+                  <Link
+                    href="/about"
+                    className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                  >
+                    <User size={16} /> About Me
+                  </Link>
+                </motion.div>
               </li>
               <li>
-                <motion.a
-                  href="#"
-                  whileHover={{ x: 2 }}
-                  whileTap={{ x: 0 }}
-                  className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  <Mail size={16} /> Contact
-                </motion.a>
+                <motion.div whileHover={{ x: 2 }} whileTap={{ x: 0 }}>
+                  <Link
+                    href="/contact"
+                    className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                  >
+                    <Mail size={16} /> Contact
+                  </Link>
+                </motion.div>
               </li>
               <li>
-                <motion.a
-                  href="#"
-                  whileHover={{ x: 2 }}
-                  whileTap={{ x: 0 }}
-                  className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  <Folder size={16} /> Projects
-                </motion.a>
+                <motion.div whileHover={{ x: 2 }} whileTap={{ x: 0 }}>
+                  <Link
+                    href="/projects"
+                    className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                  >
+                    <Folder size={16} /> Projects
+                  </Link>
+                </motion.div>
               </li>
               <li>
-                <motion.a
-                  href="#"
-                  whileHover={{ x: 2 }}
-                  whileTap={{ x: 0 }}
-                  className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  <FileText size={16} /> Resume
-                </motion.a>
+                <motion.div whileHover={{ x: 2 }} whileTap={{ x: 0 }}>
+                  <Link
+                    href="/resume"
+                    className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                  >
+                    <FileText size={16} /> Resume
+                  </Link>
+                </motion.div>
               </li>
             </ul>
           </div>

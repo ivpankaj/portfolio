@@ -163,21 +163,13 @@ const Services = () => {
             <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg md:text-xl">
               Transforming ideas into exceptional digital experiences with cutting-edge technologies and best practices.
             </p>
-            
-            <div className="mt-10">
-              <button className="bg-white text-black font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition-colors mr-4">
-                Get Started
-              </button>
-              <button className="border border-white text-black font-bold py-3 px-6 rounded-md hover:bg-white/10 transition-colors">
-                Learn More
-              </button>
-            </div>
+          
           </div>
         </div>
       </div>
       
       {/* Services Grid */}
-      <div className="py-20 px-4 ">
+      <div className=" px-4 ">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Full Stack Services</h2>
