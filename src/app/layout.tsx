@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
+      <meta name="google-site-verification" content="4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6F6G19EG1P"
           strategy="afterInteractive"
