@@ -61,7 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
   
   return (
     <div 
-      className={`bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 transition-all duration-300 h-full ${
+      className={`bg-white dark:bg-black border border-gray-200 dark:border-white rounded-lg p-6 transition-all duration-300 h-full ${
         isHovered ? "transform -translate-y-2 shadow-lg shadow-gray-300/20 dark:shadow-black/20" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -197,7 +197,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="py-20 px-4 bg-gray-50 dark:bg-gray-950">
+      <div className="py-20 px-4 bg-gray-50 dark:bg-black">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Technology Stack I worked with..</h2>

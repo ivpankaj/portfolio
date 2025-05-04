@@ -36,7 +36,7 @@ export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 20%", "end 80%"],
+    offset: ["start 20%", "end 40%"],
   });
 
   // Transform for the line progress
@@ -84,7 +84,7 @@ export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
         
         {/* Background line */}
         <div
-          className="absolute md:left-8 left-8 top-0 h-full w-[2px] bg-neutral-200 dark:bg-neutral-700 opacity-40"
+          className="absolute md:left-8 left-8 top-0 w-[2px] bg-neutral-200 dark:bg-neutral-700 opacity-40"
         />
         
         {/* Animated progress line */}

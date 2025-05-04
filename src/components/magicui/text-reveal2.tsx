@@ -28,20 +28,19 @@ const GlobeDiv = () => {
         </p>
         
         <div className="pt-4">
-          <button className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-medium py-3 px-6 rounded-lg flex items-center transition-all duration-300 hover:shadow-lg dark:hover:shadow-gray-900/30 group">
+          <button className="bg-white dark:bg-black border border-gray-300 dark:border-white text-gray-900 dark:text-white font-medium py-3 px-6 rounded-lg flex items-center transition-all duration-300 hover:shadow-lg dark:hover:shadow-gray-900/30 group">
             Connect with me
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
           </button>
         </div>
         
         <div className="mt-8 grid grid-cols-2 gap-4">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-black p-4 rounded-lg border border-gray-200 dark:border-white">
             <h3 className="text-gray-900 dark:text-white font-medium">For Personal Projects</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">React, Next.js, Tailwind</p>
+
           </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-black p-4 rounded-lg border border-gray-200 dark:border-white">
             <h3 className="text-gray-900 dark:text-white font-medium">For Professional Projects</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">Node.js, Express, MongoDB</p>
           </div>
         </div>
       </div>

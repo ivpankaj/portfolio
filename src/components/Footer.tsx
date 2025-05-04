@@ -13,6 +13,7 @@ import {
   Folder,
   FileText,
 } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -25,14 +26,13 @@ export function Footer() {
           {/* Branding + Socials */}
           <div>
             <Link href="/" className="flex items-center mb-6">
-              <motion.div
-                className="h-10 w-10 rounded-full bg-black dark:bg-white flex items-center justify-center mr-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <div className="h-6 w-6 rounded-full bg-white dark:bg-black" />
-              </motion.div>
-              <span className="text-xl font-bold text-black dark:text-white">Pankaj</span>
+              <Image
+                        src="/pankaj__1_-removebg-preview.png"
+                        alt="Logo"
+                        width={40}
+                        height={40}
+                      />
+              <span className="text-xl font-bold text-black dark:text-white ml-6">Pankaj</span>
             </Link>
 
             <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-6 max-w-sm">
@@ -42,7 +42,7 @@ export function Footer() {
             <div className="flex gap-4">
               <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                 <Link
-                  href="https://twitter.com/yourusername"
+                  href="https://x.com/ivpankaj"
                   target="_blank"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                 >
@@ -51,7 +51,7 @@ export function Footer() {
               </motion.div>
               <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                 <Link
-                  href="https://github.com/yourusername"
+                  href="https://github.com/ivpankaj"
                   target="_blank"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                 >
@@ -60,7 +60,7 @@ export function Footer() {
               </motion.div>
               <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                 <Link
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/ivpankaj15"
                   target="_blank"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                 >
@@ -69,7 +69,7 @@ export function Footer() {
               </motion.div>
               <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                 <Link
-                  href="https://yourwebsite.com"
+                  href="https://ivpankaj.vercel.app"
                   target="_blank"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                 >

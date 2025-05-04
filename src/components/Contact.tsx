@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
-import Statistics from './Statistics';
 import FAQSection from './FAQSection';
 import CallToAction from './CallToAction';
 
@@ -44,9 +43,24 @@ export default function ContactPage() {
   };
 
   const handleSocialClick = (platform: string) => {
-    // In a real app, you would redirect to the actual social media links
-    alert(`Redirecting to ${platform}`);
+    const socialLinks: { [key: string]: string } = {
+      facebook: 'https://www.facebook.com/ivpankaj',
+      twitter: 'https://x.com/ivpankaj',
+      instagram: 'https://www.instagram.com/ivpankaj',
+      linkedin: 'https://www.linkedin.com/in/ivpankaj15',
+      github: 'https://github.com/ivpankaj',
+      youtube: 'https://www.youtube.com/',
+    };
+  
+    const url = socialLinks[platform.toLowerCase()];
+  
+    if (url) {
+      window.open(url, '_blank'); // Opens in new tab
+    } else {
+      alert(`Unknown platform: ${platform}`);
+    }
   };
+  
 
   return (
     <div className="font-sans">
@@ -61,21 +75,21 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-              We&apos;re just a message away. Reach out to us for any inquiries, collaborations, or just to say hello.
+              We&apos;re just a message away. Reach out to me for any inquiries, collaborations, or just to say hello.
             </p>
           </div>
           
           {/* Contact Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Left panel - Contact Info */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg border border-black p-6">
+            <div className="bg-white dark:bg-black rounded-lg border border-black dark:border-white p-6">
               <ContactInfo 
                 handleSocialClick={handleSocialClick}
               />
             </div>
             
             {/* Right panel - Contact Form */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg border border-black shadow-md p-6">
+            <div className="bg-white dark:bg-black rounded-lg border border-black dark:border-white shadow-md p-6">
               <ContactForm 
                 submitted={submitted}
                 setSubmitted={setSubmitted}
@@ -86,8 +100,7 @@ export default function ContactPage() {
             </div>
           </div>
           
-          {/* Statistics Section */}
-          <Statistics />
+      
           
           {/* FAQ Section */}
           <FAQSection />

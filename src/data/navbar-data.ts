@@ -10,19 +10,19 @@
   export const faqs = [
     {
       question: "What are your business hours?",
-      answer: "We're available Monday through Friday from 9:00 AM to 6:00 PM EST. On weekends, our online support is available from 10:00 AM to 4:00 PM EST."
+      answer: "I am available Monday through Friday from 9:00 AM to 6:00 PM IST. On weekends, my online support is available from 10:00 AM to 4:00 PM IST."
     },
     {
       question: "How quickly do you respond to inquiries?",
-      answer: "We aim to respond to all inquiries within 24 business hours. For urgent matters, please indicate in your message or call our support line directly."
+      answer: "I aim to respond to all inquiries within 24 business hours. For urgent matters, please indicate in your message or call my support line directly."
     },
     {
       question: "Do you offer international services?",
-      answer: "Yes! We serve clients globally and have representatives in multiple time zones to ensure prompt communication regardless of your location."
+      answer: "Yes! I serve clients globally and have representatives in multiple time zones to ensure prompt communication regardless of your location."
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards, PayPal, bank transfers, and cryptocurrency for select services. Payment details will be provided after initial consultation."
+      answer: "I accept all major credit cards,Paytm, PhonePay , GPay, PayPal, bank transfers, and cryptocurrency for select services. Payment details will be provided after initial consultation."
     }
   ];
 

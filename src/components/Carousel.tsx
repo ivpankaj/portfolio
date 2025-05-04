@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
@@ -94,7 +95,7 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
 
   return (
     <div 
-      className="relative w-full max-w-5xl mx-auto overflow-hidden h-64 sm:h-72 md:h-80 lg:h-96 mb-6 md:mb-10 rounded-lg md:rounded-xl border border-gray-200 dark:border-gray-700"
+      className="relative w-full max-w-5xl mx-auto overflow-hidden h-64 sm:h-72 md:h-80 lg:h-96 mb-6 md:mb-10 rounded-lg md:rounded-xl border dark:border-white border-black"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -110,7 +111,7 @@ const PremiumCarousel = ({ slides }: PremiumCarouselProps) => {
           initial="incoming"
           animate="active"
           exit="outgoing"
-          className="absolute inset-0 w-full h-full bg-white dark:bg-gray-800"
+          className="absolute inset-0 w-full h-full "
         >
           {slides[currentIndex]}
         </motion.div>
@@ -218,45 +219,45 @@ export default function TestimonialCarousel() {
   const testimonials = [
     <TestimonialSlide 
       key="testimonial1"
-      name="Sarah Johnson"
-      role="Marketing Director"
-      company="TechVision Inc."
-      quote="The team delivered an exceptional website that perfectly captured our brand identity. Their attention to detail and responsive design approach exceeded our expectations."
+      name="Jatin Batra"
+      role="Founder and Director"
+      company="Mployee.me"
+      quote="Pankaj did an exceptional work in frontend for our website , his knowledge about animations and tech framework makes our website to look cool and responsive , our customers really loves what he has built for us."
       rating={5}
     />,
     <TestimonialSlide 
       key="testimonial2"
-      name="Michael Chen"
-      role="CTO"
-      company="InnovateTech"
-      quote="Their backend architecture implementation dramatically improved our system performance. Load times decreased by 70%, and user engagement has significantly increased."
+      name="Ayush Mishra"
+      role="SDE 1"
+      company="Apar Technology"
+      quote="I have working with Pankaj since 9 years and i found his knowledge about technology is phenominal , he really knows how to tackle problems and he also learn with those mistakes."
       rating={5}
     />,
     <TestimonialSlide 
       key="testimonial3"
-      name="Emily Rodriguez"
-      role="Founder"
-      company="StartUp Solutions"
-      quote="As a startup, we needed a scalable solution that could grow with us. Their full-stack expertise provided us with exactly what we needed at a price point that made sense."
+      name="Palak Jain"
+      role="Founder and CEO"
+      company="Mployee.me"
+      quote="As a startup, we needed a scalable solution that could grow with us. Pankaj's full-stack expertise provided us with exactly what we needed at a price point that made sense."
       rating={4}
     />,
     <TestimonialSlide 
       key="testimonial4"
-      name="David Wilson"
-      role="Product Manager"
-      company="GlobalApp"
-      quote="The mobile application they developed for us has been downloaded over 100,000 times with overwhelmingly positive reviews. The UI is intuitive and performance is flawless."
+      name="Deepesh Garg"
+      role="Founder and CEO"
+      company="Dosso21 Services Pvt Ltd"
+      quote="The web application he developed for us has been visited over 100,000 times with overwhelmingly positive reviews. The UI is intuitive and performance is flawless."
       rating={5}
     />,
   ];
 
   return (
-    <div className="w-full bg-gray-50 dark:bg-gray-950 py-8 sm:py-12 md:py-16 px-3 sm:px-4">
+    <div className="w-full bg-gray-50 dark:bg-black py-8 sm:py-12 md:py-16 px-3 sm:px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">Client Testimonials</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">What World thinks about me...</h2>
           <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            See what our clients are saying about their experience working with us
+            See what my clients are saying about their experience working with me
           </p>
         </div>
         

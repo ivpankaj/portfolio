@@ -42,9 +42,9 @@ export default function ContactForm({
       ) : (
         <>
           <div className=" rounded-lg p-8 mb-8">
-            <h2 className="text-3xl font-bold mb-2">Send us a message</h2>
+            <h2 className="text-3xl font-bold mb-2">Send me a message</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Fill out the form below and we&apos;ll get back to you as soon as possible.
+              Fill out the form below and I&apos;ll get back to you as soon as possible.
             </p>
             
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -56,7 +56,7 @@ export default function ContactForm({
                   value={formData.name} 
                   onChange={handleInputChange}
                   className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent" 
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   required
                 />
               </div>
@@ -69,7 +69,7 @@ export default function ContactForm({
                   value={formData.email}
                   onChange={handleInputChange}
                   className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent" 
-                  placeholder="john@example.com"
+                  placeholder="Your mail"
                   required
                 />
               </div>
@@ -83,7 +83,7 @@ export default function ContactForm({
                     value={formData.phone || ''} 
                     onChange={handleInputChange}
                     className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent" 
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="Your Phone Number"
                   />
                 </div>
                 
@@ -93,7 +93,7 @@ export default function ContactForm({
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-transparent"
+                    className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all dark:bg-black bg-white"
                   >
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Support Request">Support Request</option>
