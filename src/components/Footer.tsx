@@ -116,7 +116,7 @@ export function Footer() {
               <li>
                 <motion.div whileHover={{ x: 2 }} whileTap={{ x: 0 }}>
                   <Link
-                    href="/"
+                    href="https://drive.google.com/file/d/1x1zFawaMUXD-7xVfu0igNXkStrlpBRGB/view"
                     className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                   >
                     <FileText size={16} /> Resume

@@ -11,7 +11,7 @@ const Main = () => {
       <header className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-10 mb-12 px-4 w-full">
         {/* Resume Download */}
         <a
-          href="/pankaj.pdf"
+          href="https://drive.google.com/file/d/1x1zFawaMUXD-7xVfu0igNXkStrlpBRGB/view"
           download="pankaj_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
