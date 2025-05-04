@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Script from "next/script"; // ✅ import Script
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pankaj",
+  title: "ivpankaj",
   description: "Design and Developed by Pankaj !",
+  keywords: "ivpankaj, portfolio of pankaj",
 };
 
 export default function RootLayout({
@@ -27,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        {/* Google Analytics Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6F6G19EG1P"
           strategy="afterInteractive"
@@ -41,6 +42,33 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+      <Head>
+        <title>ivpankaj |</title>
+        <meta
+          name="description"
+          content=" Portfolio of ivpankaj, A computer science engineer"
+        />
+        <link rel="canonical" href="https://ivpankaj.vercel.app" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="ivpankaj" />
+        <meta property="og:image" content="https://ivpankaj.vercel.app" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="portfolio of ivpankaj" />
+      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Portfolio",
+            name: "ivpankaj",
+            description: "Portfolio of ivpankaj.",
+            brand: "ivpankaj",
+          }),
+        }}
+      />
       <body className="antialiased">
         <ThemeProvider
           attribute="class"

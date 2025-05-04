@@ -22,7 +22,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
   const lines = children.split("\n");
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
+    <header ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
       <div className="sticky top-10 md:top-0 flex h-screen w-full items-center justify-center bg-transparent px-4 py-8 md:py-12">
         <div className="mx-auto flex w-full max-w-6xl flex-col justify-center gap-4 md:gap-6 lg:flex-row lg:items-center lg:gap-8">
           {/* Text Section - Left side */}
@@ -64,7 +64,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <>
       <TextRevealIntro />
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-10 mb-12 px-4 w-full">
+      <header className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-10 mb-12 px-4 w-full">
         {/* Resume Download */}
         <a
           href="/pankaj.pdf"
@@ -35,7 +35,7 @@ const Main = () => {
         >
           Hire Me
         </Link>
-      </div>
+      </header>
     </>
   )
 }

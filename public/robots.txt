@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+
+# Host
+Host: https://ivpankaj.vercel.app
+
+# Sitemaps
+Sitemap: https://ivpankaj.vercel.app/sitemap.xml
