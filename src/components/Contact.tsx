@@ -5,6 +5,8 @@ import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 import FAQSection from './FAQSection';
 import CallToAction from './CallToAction';
+import { addDoc, collection, Timestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebaseConfig';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -16,22 +18,33 @@ export default function ContactPage() {
     subject: 'General Inquiry'
   });
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
+    console.log(formData,"sada")
     e.preventDefault();
-    // Simulate form submission
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
+  
+    try {
+      await addDoc(collection(db, "messages"), {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || null,
+        subject: formData.subject,
+        message: formData.message,
+        createdAt: Timestamp.now(),
+      });
+  
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
         phone: '',
         message: '',
         subject: 'General Inquiry'
-      });
-    }, 3000);
+      })
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
