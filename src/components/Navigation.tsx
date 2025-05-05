@@ -37,7 +37,7 @@ export default function Navigation() {
         <div className="flex items-center">
           <div className="w-10 h-10 flex items-center justify-center mr-3">
             <Image
-              src="/pankaj__1_-removebg-preview.png"
+              src="https://ik.imagekit.io/ivpankaj/public/pankaj__1_-removebg-preview.png?updatedAt=1746425529510"
               alt="Logo"
               width={40}
               height={40}

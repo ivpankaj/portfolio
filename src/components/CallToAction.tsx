@@ -5,7 +5,7 @@ export default function CallToAction() {
     <div className="text-center my-20 animate-fadeIn animation-delay-500">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Let&apos;s Work Together</h2>
       <p className="max-w-2xl mx-auto mb-8">
-        Whether you have a project in mind or just want to explore possibilities, we&apos;re here to help you succeed.
+        Whether you have a project in mind or just want to explore possibilities, I&apos;m here to help you succeed.
       </p>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
         <a 

@@ -27,12 +27,12 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center mb-6">
               <Image
-                        src="/pankaj__1_-removebg-preview.png"
+                        src="https://ik.imagekit.io/ivpankaj/public/pankaj3-removebg-preview.png?updatedAt=1746425529329"
                         alt="Logo"
-                        width={40}
-                        height={40}
+                        width={100}
+                        height={100}
                       />
-              <span className="text-xl font-bold text-black dark:text-white ml-6">Pankaj</span>
+              <span className="text-xl font-bold text-black dark:text-white">Pankaj</span>
             </Link>
 
             <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-6 max-w-sm">

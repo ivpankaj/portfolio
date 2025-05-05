@@ -50,10 +50,10 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
           </div>
           
           {/* Image Section - Right side */}
-          <div className="flex w-full flex-1 justify-center mt-6 lg:mt-0 lg:justify-end">
+          <div className="flex w-full flex-1 justify-center  lg:mt-0 lg:justify-end">
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
               <Image
-                src="/WhatsApp_Image_2025-04-11_at_16.15.57_4c93467a-removebg-preview.png"
+                src="https://ik.imagekit.io/ivpankaj/public/WhatsApp_Image_2025-04-11_at_16.15.57_4c93467a-removebg-preview.png?updatedAt=1746425534144"
                 alt="Description of the image"
                 width={500}
                 height={800}
