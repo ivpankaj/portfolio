@@ -7,7 +7,7 @@ User-agent: *
 Disallow: /admin
 
 # Host
-Host: https://ivpankaj.vercel.app
+Host: https://ivpankaj.web.app
 
 # Sitemaps
-Sitemap: https://ivpankaj.vercel.app/sitemap.xml
+Sitemap: https://ivpankaj.web.app/sitemap.xml

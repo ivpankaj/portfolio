@@ -12,11 +12,11 @@ export default function TextRevealIntro() {
           name="description"
           content=" Portfolio of ivpankaj, A computer science engineer"
         />
-        <link rel="canonical" href="https://ivpankaj.vercel.app/about" />
+        <link rel="canonical" href="https://ivpankaj.web.app/about" />
 
         {/* Open Graph */}
         <meta property="og:title" content="ivpankaj" />
-        <meta property="og:image" content="https://ivpankaj.vercel.app" />
+        <meta property="og:image" content="https://ivpankaj.web.app" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="portfolio of ivpankaj" />
