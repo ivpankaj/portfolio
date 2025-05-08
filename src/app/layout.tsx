@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ivpankaj",
-  description: "Design and Developed by Pankaj !",
+  description: "Portfolio of Pankaj, ivpankaj !",
   keywords: "ivpankaj, portfolio of pankaj",
 };
 
