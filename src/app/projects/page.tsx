@@ -1,5 +1,5 @@
 import MainLayout from '@/components/MainLayout'
-import { TimelineDemo2 } from '@/components/TimeLine2'
+import ProjectsPage from '@/components/Projects'
 import Head from 'next/head'
 import React from 'react'
 
@@ -34,7 +34,7 @@ const page = () => {
     }}
   />
     <MainLayout>
-        <TimelineDemo2/>
+        <ProjectsPage/>
     </MainLayout></>
   )
 }
