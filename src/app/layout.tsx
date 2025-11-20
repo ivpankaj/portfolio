@@ -71,8 +71,9 @@ export default function RootLayout({
         {/* Google Verifications */}
         <meta
           name="google-site-verification"
-          content="4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI"
+          content="HkYS3evi3jqymwePJIQD6Ym4GZGNKhG28ZPB_K1ZfsY"
         />
+
       </head>
 
       <body className="antialiased">
