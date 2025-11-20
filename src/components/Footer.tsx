@@ -69,7 +69,7 @@ export function Footer() {
               </motion.div>
               <motion.div whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                 <Link
-                  href="https://ivpankaj.web.app"
+                  href="https://ivpankaz.web.app"
                   target="_blank"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                 >

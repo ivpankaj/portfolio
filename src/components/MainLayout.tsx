@@ -1,5 +1,3 @@
-// app/components/MainLayout.tsx
-"use client";
 
 import Navigation from "@/components/Navigation";
 

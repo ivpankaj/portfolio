@@ -1,5 +1,3 @@
-// src/app/cookmypapers/summary/page.tsx
-"use client"
 
 import React, { JSX } from "react"
 import {

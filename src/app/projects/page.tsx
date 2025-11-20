@@ -1,42 +1,63 @@
-import MainLayout from '@/components/MainLayout'
-import ProjectsPage from '@/components/Projects'
-import Head from 'next/head'
-import React from 'react'
+import MainLayout from "@/components/MainLayout";
+import ProjectsPage from "@/components/Projects";
 
-const page = () => {
+export const metadata = {
+  title: "Projects | Pankaj Verma (ivpankaj)",
+  description:
+    "Explore the projects built by Pankaj Verma (ivpankaj) — MERN Stack Developer and Software Engineer.",
+  alternates: {
+    canonical: "https://ivpankaz.web.app/projects",
+  },
+  openGraph: {
+    title: "Projects | Pankaj Verma (ivpankaj)",
+    description:
+      "Browse the development projects created by Pankaj Verma — full stack applications, UI designs and tools.",
+    url: "https://ivpankaz.web.app/projects",
+    images: [
+      {
+        url: "/ivpankaj.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | Pankaj Verma",
+    description:
+      "Projects created by Pankaj Verma — MERN stack developer & software engineer.",
+    images: ["/ivpankaj.png"],
+  },
+};
+
+export default function ProjectPage() {
   return (
-   <>
-    <Head>
-    <title>ivpankaj | Pankaj</title>
-    <meta
-      name="description"
-      content=" Portfolio of ivpankaj, A computer science engineer"
-    />
-    <link rel="canonical" href="https://ivpankaj.web.app/projects" />
+    <>
+      {/* JSON-LD for Person Projects */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Pankaj Verma",
+            alternateName: "ivpankaj",
+            url: "https://ivpankaz.web.app/projects",
+            jobTitle: "Software Developer",
+            sameAs: [
+              "https://instagram.com/ivpankaj",
+              "https://twitter.com/ivpankaj",
+              "https://github.com/ivpankaj",
+            ],
+            image: "https://ivpankaz.web.app/ivpankaj.png",
+          }),
+        }}
+      />
 
-    {/* Open Graph */}
-    <meta property="og:title" content="ivpankaj" />
-    <meta property="og:image" content="https://ivpankaj.web.app" />
-
-    {/* Twitter */}
-    <meta name="twitter:card" content="portfolio of ivpankaj" />
-  </Head>
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Portfolio",
-        name: "ivpankaj",
-        description: "Portfolio of ivpankaj.",
-        brand: "ivpankaj",
-      }),
-    }}
-  />
-    <MainLayout>
-        <ProjectsPage/>
-    </MainLayout></>
-  )
+      <MainLayout>
+        <ProjectsPage />
+      </MainLayout>
+    </>
+  );
 }
-
-export default page

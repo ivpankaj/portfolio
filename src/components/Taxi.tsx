@@ -1,7 +1,7 @@
 // src/app/we4you/summary/page.tsx   (Next.js App Router)
 // OR src/pages/we4you-summary.tsx   (Pages Router)
 // Install icons if not already: npm install lucide-react
-"use client"
+
 
 import React, { JSX } from "react"
 import {

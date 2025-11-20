@@ -1,5 +1,4 @@
-// src/app/lms/summary/page.tsx
-"use client"
+
 
 import React, { JSX } from "react"
 import {

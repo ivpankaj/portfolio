@@ -1,4 +1,3 @@
-'use client'
 
 import { TextRevealIntro } from '@/components/HeaderText'
 import React from 'react'

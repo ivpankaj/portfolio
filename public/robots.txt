@@ -7,7 +7,7 @@ User-agent: *
 Disallow: /admin
 
 # Host
-Host: https://ivpankaj.web.app
+Host: https://ivpankaz.web.app
 
 # Sitemaps
-Sitemap: https://ivpankaj.web.app/sitemap.xml
+Sitemap: https://ivpankaz.web.app/sitemap.xml
