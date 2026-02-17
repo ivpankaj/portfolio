@@ -8,7 +8,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm font-normal mb-6">
-            Started working as Full Stack Developer at <span className="text-green-400">Fourbrick Technology</span>
+            Started working as Full Stack Developer at <span className="text-green-400">Fourbrick Technology (Noida)</span>
           </p>
           <div className="space-y-4">
             <div className="dark:bg-black p-4 rounded-lg border border-black dark:border-white">
@@ -37,7 +37,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm font-normal mb-6">
-            Joined <span className="text-green-400">Mployee.me</span> as a Full Stack Developer
+            Joined <span className="text-green-400">Mployee.me (Noida/Remote)</span> as a Full Stack Developer
           </p>
           <div className="space-y-4">
             <div className="dark:bg-black p-4 rounded-lg border border-black dark:border-white">
@@ -66,7 +66,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm font-normal mb-4">
-            My first company, joined as Full Stack Developer at <span className="text-green-400">Dosso21 Services Pvt Ltd</span>
+            My first company, joined as Full Stack Developer at <span className="text-green-400">Dosso21 Services Pvt Ltd (Noida)</span>
           </p>
           <div className="space-y-4">
             <div className="dark:bg-black p-4 rounded-lg border border-black dark:border-white">

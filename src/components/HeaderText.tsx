@@ -1,13 +1,12 @@
 import { TextReveal } from "./magicui/text-reveal";
 
 export function TextRevealIntro() {
-    return (
-      <>
+  return (
+    <>
       <TextReveal>
-        {"Hellow world !🌎 \nI am Pankaj \nA Computer Science Engineer with a cool interest in Software Development </>"}
+        {"Hello World! 🌎 \nI am Pankaj Verma. \nSoftware Developer from Noida. \nI build high-quality web & mobile applications that solve real-world problems."}
       </TextReveal>
-      
-      </>
-    );
-  }
-  
+
+    </>
+  );
+}
