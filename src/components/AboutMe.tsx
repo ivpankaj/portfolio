@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Code, Database, Layout, Smartphone, Globe, Server, Zap, TouchpadOff } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -82,7 +82,7 @@ const Services = () => {
             </h2>
             <div className="h-1 w-20 bg-gray-300 dark:bg-gray-700 mx-auto"></div>
             <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-              Top-notch digital services in <span className="text-blue-500 font-semibold">Noida & Greater Noida</span>. From creating your website to keeping it running smoothly, I handle the technical details.
+              Top-notch digital services in <span className="text-blue-500 font-semibold">Noida &amp; Greater Noida</span>. From creating your website to keeping it running smoothly, I handle the technical details.
             </p>
           </div>
 

@@ -57,7 +57,7 @@ export default function LMSSummaryPage(): JSX.Element {
             <li><strong>Interactive Learning:</strong> Quizzes, assignments, and peer discussion forums.</li>
             <li><strong>Progress Tracking:</strong> Dashboards track completion %, scores, and deadlines.</li>
             <li><strong>Certification:</strong> Auto-generate certificates after passing thresholds.</li>
-            <li><strong>Analytics & Reports:</strong> Instructors monitor student performance and optimize courses.</li>
+            <li><strong>Analytics &amp; Reports:</strong> Instructors monitor student performance and optimize courses.</li>
           </ol>
         </Section>
 
@@ -132,7 +132,7 @@ export default function LMSSummaryPage(): JSX.Element {
         {/* Challenges & Solutions */}
         <Section title="⚡ Challenges & Solutions">
           <ul className="space-y-3 list-disc list-inside text-sm text-black/80">
-            <li><strong>Scalable Video Delivery:</strong> Solved with adaptive bitrate streaming & CDN caching.</li>
+            <li><strong>Scalable Video Delivery:</strong> Solved with adaptive bitrate streaming &amp; CDN caching.</li>
             <li><strong>Concurrent Users:</strong> Load balancing + horizontal scaling handled spikes in usage.</li>
             <li><strong>Assessment Performance:</strong> Optimized DB indexes for large quiz/assignment datasets.</li>
             <li><strong>Engagement:</strong> Added forums, leaderboards, and gamification.</li>

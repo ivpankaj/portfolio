@@ -18,6 +18,11 @@ import {
 import { motion } from "framer-motion";
 
 
+interface Skill {
+    name: string;
+    icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>;
+    color: string;
+}
 
 const SkillsSection = () => {
     return (
@@ -56,7 +61,7 @@ const SkillsSection = () => {
                     {/* Backend */}
                     <div className="flex flex-col gap-6">
                         <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-300 w-fit mx-auto md:mx-0">
-                            Backend (Logic & Data)
+                            Backend (Logic &amp; Data)
                         </h3>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center md:justify-items-start">
                             {[
@@ -92,7 +97,7 @@ const SkillsSection = () => {
     );
 };
 
-const SkillCard = ({ skill, index }: { skill: any, index: number }) => (
+const SkillCard = ({ skill, index }: { skill: Skill, index: number }) => (
     <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}

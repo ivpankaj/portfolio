@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+
+# Host
+Host: https://ivpankaj.online
+
+# Sitemaps
+Sitemap: https://ivpankaj.online/sitemap.xml

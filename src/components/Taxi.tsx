@@ -76,7 +76,7 @@ export default function ProjectSummaryPage(): JSX.Element {
             </li>
             <li>
               <strong>Real-time Tracking:</strong> Driver coordinates stream in via MQTT, relayed
-              through Socket.IO to the passenger’s client app.
+              through Socket.IO to the passenger&apos;s client app.
             </li>
             <li>
               <strong>In-ride Communication:</strong> Secure one-to-one chat between user and driver
@@ -169,7 +169,7 @@ export default function ProjectSummaryPage(): JSX.Element {
               </h4>
               <ul className="mt-2 text-sm text-black/70 space-y-1">
                 <li>MQTT — driver telemetry</li>
-                <li>Socket.IO (ASGI) — chat & live ride updates</li>
+                <li>Socket.IO (ASGI) — chat &amp; live ride updates</li>
                 <li>Firebase Cloud Messaging — notifications</li>
               </ul>
             </div>

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const AboutSection = () => {
     return (
@@ -26,7 +25,7 @@ const AboutSection = () => {
                         About Me
                     </h2>
                     <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                        I'm <span className="font-semibold text-purple-600 dark:text-purple-400">Pankaj Verma</span>, a passionate Software Developer based in <span className="font-semibold text-blue-600 dark:text-blue-400">Noida</span>. I simplify complex technology to build products that people love to use.
+                        I&apos;m <span className="font-semibold text-purple-600 dark:text-purple-400">Pankaj Verma</span>, a passionate Software Developer based in <span className="font-semibold text-blue-600 dark:text-blue-400">Noida</span>. I simplify complex technology to build products that people love to use.
                     </p>
                     <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
                         I specialize in creating websites and applications that are fast, attractive, and easy to use. whether you need a simple portfolio or a complex business platform, I can help you build it.
@@ -66,10 +65,10 @@ const AboutSection = () => {
                             </div>
                             <div className="space-y-2 text-gray-300">
                                 <p><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = <span className="text-yellow-400">{"{"}</span></p>
-                                <p className="pl-4">name: <span className="text-green-400">"Pankaj Verma"</span>,</p>
-                                <p className="pl-4">role: <span className="text-green-400">"MERN Stack Developer"</span>,</p>
-                                <p className="pl-4">location: <span className="text-green-400">"Noida, Uttar Pradesh"</span>,</p>
-                                <p className="pl-4">skills: <span className="text-yellow-400">["React", "Next.js", "Node.js"]</span>,</p>
+                                <p className="pl-4">name: <span className="text-green-400">&quot;Pankaj Verma&quot;</span>,</p>
+                                <p className="pl-4">role: <span className="text-green-400">&quot;MERN Stack Developer&quot;</span>,</p>
+                                <p className="pl-4">location: <span className="text-green-400">&quot;Noida, Uttar Pradesh&quot;</span>,</p>
+                                <p className="pl-4">skills: <span className="text-yellow-400">[&quot;React&quot;, &quot;Next.js&quot;, &quot;Node.js&quot;]</span>,</p>
                                 <p className="pl-4">hardWorker: <span className="text-blue-400">true</span>,</p>
                                 <p className="pl-4">quickLearner: <span className="text-blue-400">true</span>,</p>
                                 <p className="pl-4">hriable: <span className="text-blue-400">true</span></p>

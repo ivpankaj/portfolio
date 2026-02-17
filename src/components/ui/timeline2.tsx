@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import {
   useScroll,
@@ -48,15 +47,15 @@ export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-        <div className="text-center mt-24">
-            <h1 className={`text-4xl md:text-7xl font-bold mb-6 'animate-fadeInUp' : 'opacity-0'}`}>
-              Projects I made with <span className="relative text-purple-800">
-                perfection
-                <span className="absolute bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
-              </span>
-            </h1>
-        
-          </div>
+      <div className="text-center mt-24">
+        <h1 className={`text-4xl md:text-7xl font-bold mb-6 'animate-fadeInUp' : 'opacity-0'}`}>
+          Projects I made with <span className="relative text-purple-800">
+            perfection
+            <span className="absolute bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
+          </span>
+        </h1>
+
+      </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -81,12 +80,12 @@ export const Timeline2 = ({ data }: { data: TimelineEntry[] }) => {
             </div>
           </div>
         ))}
-        
+
         {/* Background line */}
         <div
           className="absolute md:left-8 left-8 top-0 w-[2px] bg-neutral-200 dark:bg-neutral-700 opacity-40"
         />
-        
+
         {/* Animated progress line */}
         <motion.div
           style={{

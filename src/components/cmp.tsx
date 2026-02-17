@@ -34,7 +34,7 @@ export default function CookMyPapersSummary(): JSX.Element {
         {/* Project Purpose */}
         <Section title="📖 Purpose & Vision">
           <p className="text-sm text-black/70 leading-relaxed">
-            CookMyPapers aims to empower individuals & businesses by offering polished digital products — websites, resumes, full-stack web solutions — that balance aesthetics with functionality. The mission is to deliver fast, reliable, professional creative work, backed by modern technologies and tools. Established in Noida, serving clients who want standout digital presence.  
+            CookMyPapers aims to empower individuals &amp; businesses by offering polished digital products — websites, resumes, full-stack web solutions — that balance aesthetics with functionality. The mission is to deliver fast, reliable, professional creative work, backed by modern technologies &amp; tools. Established in Noida, serving clients who want standout digital presence.
           </p>
         </Section>
 
@@ -54,16 +54,16 @@ export default function CookMyPapersSummary(): JSX.Element {
               <strong>Design Phase:</strong> Create wireframes or design drafts (UI/UX). Client feedback loops.
             </li>
             <li>
-              <strong>Development Phase:</strong> Build website or application, or craft resume template/design. Ensure responsive layout & cross-device support.
+              <strong>Development Phase:</strong> Build website or application, or craft resume template/design. Ensure responsive layout &amp; cross-device support.
             </li>
             <li>
-              <strong>Testing & Revisions:</strong> Review visuals, functionality, fix bugs or polish design across devices & browsers.
+              <strong>Testing &amp; Revisions:</strong> Review visuals, functionality, fix bugs or polish design across devices &amp; browsers.
             </li>
             <li>
-              <strong>Delivery & Deployment:</strong> Handover final files; if website, host or deploy. Provide source files or editable versions.
+              <strong>Delivery &amp; Deployment:</strong> Handover final files; if website, host or deploy. Provide source files or editable versions.
             </li>
             <li>
-              <strong>Support & Maintenance:</strong> Optional maintenance, updates, or revisions after delivery.
+              <strong>Support &amp; Maintenance:</strong> Optional maintenance, updates, or revisions after delivery.
             </li>
           </ol>
         </Section>
@@ -101,26 +101,26 @@ export default function CookMyPapersSummary(): JSX.Element {
         {/* Tools & Tech Stack (guessed/implied) */}
         <Section title="🛠 Tools & Tech Stack">
           <p className="text-sm text-black/70 leading-relaxed">
-            While CookMyPapers doesn’t publicly list every tool, based on the offerings, one can infer the stack includes:
+            While CookMyPapers doesn&apos;t publicly list every tool, based on the offerings, one can infer the stack includes:
           </p>
           <ul className="mt-4 space-y-2 text-sm text-black/70 list-disc list-inside">
             <li>Modern front-end frameworks (React, Next.js or similar) for building sites and resumes.</li>
             <li>CSS frameworks & design tooling for responsive design / prototyping.</li>
             <li>Backend services or static site hosting (Vercel or similar) for deployment.</li>
-            <li>Graphics tools for design (e.g. Figma/Adobe or equivalents) for branding & mockups.</li>
+            <li>Graphics tools for design (e.g. Figma/Adobe or equivalents) for branding &amp; mockups.</li>
             <li>Email/contact infrastructure for client communication (forms, inbox). </li>
-            <li>Metrics & analytics for tracking satisfaction, clients, project portfolio.</li>
+            <li>Metrics &amp; analytics for tracking satisfaction, clients, project portfolio.</li>
           </ul>
         </Section>
 
         {/* Strengths, Differentiators */}
         <Section title="⭐ Strengths & Differentiators">
           <ul className="space-y-3 list-disc list-inside text-sm text-black/80">
-            <li><strong>Design-First Approach:</strong> Emphasis on modern, premium design & attention to detail.</li>
+            <li><strong>Design-First Approach:</strong> Emphasis on modern, premium design &amp; attention to detail.</li>
             <li><strong>All-in-One Service:</strong> Website + design + resumes + dev, so clients get bundled solutions.</li>
             <li><strong>Quick Turnaround:</strong> Likely fast delivery given the product-based service style.</li>
             <li><strong>Client Satisfaction:</strong> Show metrics to build trust (though some numbers are placeholders “0+”).</li>
-            <li><strong>Transparent Contact & Location Info:</strong> Visible address, email, phone — helps trust.</li>
+            <li><strong>Transparent Contact &amp; Location Info:</strong> Visible address, email, phone — helps trust.</li>
           </ul>
         </Section>
 
@@ -130,7 +130,7 @@ export default function CookMyPapersSummary(): JSX.Element {
             <li>Update metrics to reflect real numbers (rather than “0+”) for credibility.</li>
             <li>Provide portfolio samples or case studies to show real work quality.</li>
             <li>Clarify turnaround times and pricing for various services.</li>
-            <li>Enhance site speed & SEO like client-side reviews, testimonials, visual consistency.</li>
+            <li>Enhance site speed &amp; SEO like client-side reviews, testimonials, visual consistency.</li>
           </ul>
         </Section>
 

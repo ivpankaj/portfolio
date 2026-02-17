@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -69,9 +70,10 @@ const FeaturedProjects = () => {
                                 {/* Image Container */}
                                 <div className="aspect-video w-full overflow-hidden relative">
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10" />
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={project.title}
+                                        fill
                                         className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>

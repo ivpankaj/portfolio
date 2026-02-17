@@ -89,15 +89,15 @@ export function TimelineDemo() {
                 <div className="flex items-start">
                   <span className="text-emerald-500 mr-2">✅</span>
                   <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 font-medium">Authentication & Role Management</p>
+                    <p className="text-neutral-800 dark:text-neutral-200 font-medium">Authentication &amp; Role Management</p>
                     <p className="text-xs text-neutral-600 dark:text-neutral-400">JWT-based auth with admin/user dashboard separation</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-emerald-500 mr-2">✅</span>
                   <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 font-medium">PDF & File Upload Integration</p>
-                    <p className="text-xs text-neutral-600 dark:text-neutral-400">Drag & drop file upload with Cloudinary support</p>
+                    <p className="text-neutral-800 dark:text-neutral-200 font-medium">PDF &amp; File Upload Integration</p>
+                    <p className="text-xs text-neutral-600 dark:text-neutral-400">Drag &amp; drop file upload with Cloudinary support</p>
                   </div>
                 </div>
               </div>
