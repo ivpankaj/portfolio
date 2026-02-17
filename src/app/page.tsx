@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ivpankaj.online"
   },
+  verification: {
+    google: "4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI",
+  },
 };
 
 const Page = () => {
