@@ -11,7 +11,10 @@ export const metadata: Metadata = {
     canonical: "https://ivpankaj.online"
   },
   verification: {
-    google: "4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI",
+    google: [
+      "4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI",
+      "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U"
+    ],
   },
 };
 
