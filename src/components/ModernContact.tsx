@@ -22,16 +22,30 @@ export const ModernContact = () => {
         setStatus("loading");
 
         try {
-            const response = await fetch("/api/contact", {
+            // Replace with your Web3Forms access key
+            // Get it from https://web3forms.com/
+            const access_key = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key,
+                    ...formData,
+                    subject: `New Message from ${formData.name} via Portfolio`,
+                })
             });
 
-            if (response.ok) {
+            const result = await response.json();
+
+            if (result.success) {
                 setStatus("success");
                 setFormData({ name: "", email: "", message: "" });
             } else {
+                console.error("Web3Forms error:", result);
                 setStatus("error");
             }
         } catch (error) {
