@@ -1,47 +1,32 @@
-import ContactPage from "@/components/Contact";
-import GlobeDiv from "@/components/magicui/text-reveal2";
 import MainLayout from "@/components/MainLayout";
+import { ModernContact } from "@/components/ModernContact";
 
 export const metadata = {
   title: "Contact | Pankaj Verma (ivpankaj)",
   description:
-    "Contact Pankaj Verma (ivpankaj) — Get in touch for collaboration, projects, and opportunities.",
+    "Let's build something exceptional. Get in touch with Pankaj Verma (ivpankaj) for premium web development, AI integration, and technical collaborations.",
+  keywords: ["Contact Pankaj Verma", "Hire Software Developer", "Freelance MERN Developer", "AI Engineer Contact"],
   alternates: {
     canonical: "https://ivpankaj.online/contact",
+  },
+  openGraph: {
+    title: "Contact | Pankaj Verma (ivpankaj)",
+    description: "Let's build something exceptional. Get in touch with Pankaj Verma (ivpankaj) for premium web development.",
+    url: "https://ivpankaj.online/contact",
+    images: [{ url: "/ivpankaj.png", width: 1200, height: 630, alt: "Contact Pankaj Verma" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Pankaj Verma",
+    description: "Get in touch with Pankaj Verma (ivpankaj) for premium web development.",
+    images: ["/ivpankaj.png"],
   },
 };
 
 export default function Contact() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Pankaj Verma",
-            alternateName: "ivpankaj",
-            url: "https://ivpankaj.online/contact",
-            jobTitle: "Software Developer",
-            sameAs: [
-              "https://instagram.com/ivpankaj",
-              "https://twitter.com/ivpankaj",
-              "https://github.com/ivpankaj",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              contactType: "collaboration",
-              email: "ivpnkz@gmail.com",
-            },
-          }),
-        }}
-      />
-
-      <MainLayout>
-        <GlobeDiv />
-        <ContactPage />
-      </MainLayout>
-    </>
+    <MainLayout>
+      <ModernContact />
+    </MainLayout>
   );
 }

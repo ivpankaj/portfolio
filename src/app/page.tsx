@@ -1,46 +1,44 @@
-import Main from "@/components/Main";
 import MainLayout from "@/components/MainLayout";
 import React from "react";
 import { Metadata } from "next";
+import { ModernHero } from "@/components/ModernHero";
+import { TechMarquee } from "@/components/TechMarquee";
+import { BentoSkills } from "@/components/BentoSkills";
+import { WorkHighlight } from "@/components/WorkHighlight";
+import { ModernContact } from "@/components/ModernContact";
 
 export const metadata: Metadata = {
-  title: "Pankaj Verma | Best Software Developer in Noida & Greater Noida",
-  description: "Official portfolio of Pankaj Verma (ivpankaj) — Top-rated Software Developer in Noida & Greater Noida. Specializing in MERN Stack, React, and Full-Stack Development.",
-  keywords: ["Pankaj Verma", "ivpankaj", "pankaj", "Software Developer Noida", "Best Web Developer Noida", "Greater Noida Software Engineer", "MERN Stack Developer India"],
+  title: "Pankaj Verma | Modern Software Developer & Engineer",
+  description: "Experience the next level of digital craft. Portfolio of Pankaj Verma (ivpankaj), specializing in modern web architecture, AI, and premium user experiences.",
+  keywords: ["Pankaj Verma", "ivpankaj", "Modern Portfolio", "Tech Portfolio", "Full Stack Developer", "AI Engineer", "Software Developer Noida"],
   alternates: {
-    canonical: "https://ivpankaj.online"
+    canonical: "https://ivpankaj.online/",
   },
-  verification: {
-    google: [
-      "4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI",
-      "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U"
-    ],
+  openGraph: {
+    title: "Pankaj Verma | Modern Software Developer & Engineer",
+    description: "Experience the next level of digital craft. Portfolio of Pankaj Verma (ivpankaj), specializing in modern web architecture, AI, and premium user experiences.",
+    url: "https://ivpankaj.online/",
+    images: [{ url: "/ivpankaj.png", width: 1200, height: 630, alt: "Pankaj Verma - Portfolio" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pankaj Verma | Modern Software Developer & Engineer",
+    description: "Experience the next level of digital craft. Portfolio of Pankaj Verma (ivpankaj).",
+    images: ["/ivpankaj.png"],
   },
 };
 
 const Page = () => {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Pankaj Verma Portfolio",
-            url: "https://ivpankaj.online",
-            author: {
-              "@type": "Person",
-              name: "Pankaj Verma"
-            },
-            description: "Official portfolio of Pankaj Verma (ivpankaj) — Computer Science Engineer & MERN Stack Developer."
-          }),
-        }}
-      />
-      <MainLayout>
-        <Main />
-      </MainLayout>
-    </>
+    <MainLayout>
+      <div className="bg-white min-h-screen">
+        <ModernHero />
+        <TechMarquee />
+        <BentoSkills />
+        <WorkHighlight />
+        <ModernContact />
+      </div>
+    </MainLayout>
   );
 };
 

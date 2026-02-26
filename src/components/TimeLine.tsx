@@ -4,6 +4,29 @@ import { Timeline } from "@/components/ui/timeline";
 export function TimelineDemo() {
   const data = [
     {
+      title: "October 2024 - Present",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm font-normal mb-6">
+            Working as a Full Stack Developer at <span className="text-green-400">Life changing Pvt ltd</span>
+          </p>
+          <div className="space-y-4">
+            <div className="dark:bg-black p-4 rounded-lg border border-black dark:border-white">
+              <h4 className="font-medium text-neutral-900 dark:text-white mb-2">Key Projects</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start"><span className="text-emerald-500 mr-2">✓</span>
+                  <span className="text-neutral-700 dark:text-neutral-300">Building a comprehensive e-commerce application</span>
+                </li>
+                <li className="flex items-start"><span className="text-emerald-500 mr-2">✓</span>
+                  <span className="text-neutral-700 dark:text-neutral-300">Developing SaaS marketing platform applications</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "April 2025",
       content: (
         <div>
