@@ -1,44 +1,36 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  Twitter,
-  Github,
-  Linkedin,
-  User,
-  Cpu,
-  Activity,
-  FolderOpen
-} from "lucide-react";
+import { Activity, FolderOpen, Github, Linkedin, Twitter, User } from "lucide-react";
+import { portfolioCounts, portfolioGroupCounts } from "@/data/portfolio-data";
 
 export function Footer() {
   return (
-    <footer className="relative w-full bg-white border-t border-black">
-      <div className="max-w-7xl mx-auto py-20 px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-          {/* Logo & Vision */}
+    <footer className="relative w-full border-t border-black bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-8 group">
-            
-              <span className="text-2xl font-black text-black tracking-tighter uppercase">Pankaj</span>
+            <Link href="/" className="mb-8 flex items-center gap-3">
+              <span className="text-2xl font-black uppercase tracking-tighter text-black">
+                Pankaj
+              </span>
             </Link>
-            <p className="text-gray-500 text-lg font-light max-w-sm leading-relaxed mb-10">
-              Architecting the future of <span className="text-black font-semibold">autonomous digital</span> ecosystems.
-              Bridging the gap between raw data and human-centric intelligence.
+
+            <p className="mb-10 max-w-xl text-lg font-light leading-relaxed text-gray-500">
+              A portfolio centered on landing pages, dashboards, and product
+              work. The current archive shows shipped client and personal builds
+              with a second wave of ideas already lined up.
             </p>
+
             <div className="flex gap-4">
               {[
                 { Icon: Github, href: "https://github.com/ivpankaj" },
                 { Icon: Linkedin, href: "https://linkedin.com/in/ivpankaj" },
-                { Icon: Twitter, href: "https://x.com/ivpankaj" }
-              ].map((social, i) => (
+                { Icon: Twitter, href: "https://x.com/ivpankaj" },
+              ].map((social) => (
                 <Link
-                  key={i}
+                  key={social.href}
                   href={social.href}
                   target="_blank"
-                  className="p-4 bg-black text-white rounded-2xl hover:bg-gray-800 transition-all flex items-center justify-center"
+                  className="flex items-center justify-center rounded-2xl bg-black p-4 text-white transition-all hover:bg-gray-800"
                 >
                   <social.Icon size={20} />
                 </Link>
@@ -46,22 +38,25 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation Matrix */}
           <div>
-            <h3 className="text-[11px] font-black text-black uppercase tracking-[0.3em] mb-10 border-b border-black w-fit pb-1">Protocols</h3>
+            <h3 className="mb-10 w-fit border-b border-black pb-1 text-[11px] font-black uppercase tracking-[0.3em] text-black">
+              Explore
+            </h3>
             <ul className="space-y-4">
               {[
-                { name: "Archive", href: "/projects", Icon: FolderOpen },
-                { name: "Bio-Sync", href: "/about", Icon: User },
-                { name: "Services", href: "/services", Icon: Cpu },
-                { name: "Stack", href: "/stack", Icon: Activity },
+                { name: "Projects", href: "/projects", Icon: FolderOpen },
+                { name: "About", href: "/about", Icon: User },
+                { name: "Services", href: "/services", Icon: Activity },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="flex items-center gap-4 text-sm font-black text-black/40 hover:text-black transition-colors uppercase tracking-widest group"
+                    className="group flex items-center gap-4 text-sm font-black uppercase tracking-widest text-black/40 transition-colors hover:text-black"
                   >
-                    <item.Icon size={16} className="group-hover:scale-110 transition-transform" />
+                    <item.Icon
+                      size={16}
+                      className="transition-transform group-hover:scale-110"
+                    />
                     {item.name}
                   </Link>
                 </li>
@@ -69,24 +64,39 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Connection Status */}
           <div>
-            <h3 className="text-[11px] font-black text-black uppercase tracking-[0.3em] mb-10 border-b border-black w-fit pb-1">System</h3>
-            <div className="space-y-6">
-              <div className="p-6 border-2 border-black rounded-3xl bg-black text-white">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-black uppercase tracking-widest">Global Status</span>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-[0_0_10px_#4ade80]" />
+            <h3 className="mb-10 w-fit border-b border-black pb-1 text-[11px] font-black uppercase tracking-[0.3em] text-black">
+              Snapshot
+            </h3>
+
+            <div className="rounded-[28px] border-2 border-black bg-black p-6 text-white">
+              <p className="text-[10px] font-black uppercase tracking-[0.28em] text-gray-400">
+                Portfolio Status
+              </p>
+              <div className="mt-5 grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-3xl font-black">{portfolioCounts.current}</p>
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
+                    Current
+                  </p>
                 </div>
-                <p className="text-xl font-black uppercase tracking-tighter">OPERATIONAL</p>
-                <div className="mt-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                  Encryption Layer: ACTIVE
+                <div>
+                  <p className="text-3xl font-black">{portfolioCounts.upcoming}</p>
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
+                    Upcoming
+                  </p>
                 </div>
               </div>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 text-center">
-                © {new Date().getFullYear()} Pankaj Verma // 2.4.0
-              </p>
+              <div className="mt-5 space-y-2 text-[10px] font-black uppercase tracking-[0.18em] text-gray-400">
+                <p>{portfolioGroupCounts.landingPages} landing pages</p>
+                <p>{portfolioGroupCounts.dashboard} dashboard</p>
+                <p>{portfolioGroupCounts.projects} project builds</p>
+              </div>
             </div>
+
+            <p className="mt-6 text-center text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
+              Copyright {new Date().getFullYear()} Pankaj Verma
+            </p>
           </div>
         </div>
       </div>

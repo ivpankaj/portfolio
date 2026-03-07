@@ -46,7 +46,7 @@ const bentoItems = [
     },
     {
         title: "CLOUD COMPUTE",
-        description: "Serverless scaling and autonomous deployment.",
+        description: "Serverless hosting, deployment flow, and production-ready cloud setup.",
         icon: <div className="flex gap-3 drop-shadow-sm"><SiAmazonwebservices size={24} className="text-[#FF9900]" /><SiFirebase size={24} className="text-[#FFCA28]" /></div>,
         className: "md:col-span-1 md:row-span-1 bg-gray-50/50",
         visual: (
@@ -55,7 +55,7 @@ const bentoItems = [
     },
     {
         title: "TYPE SAFETY",
-        description: "Strictly typed autonomous systems.",
+        description: "Strict typing patterns for predictable components and safer code changes.",
         icon: <SiTypescript size={24} className="text-[#3178C6] drop-shadow-sm" />,
         className: "md:col-span-1 md:row-span-2 bg-gray-50",
         visual: (

@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
+import { portfolioCounts } from "@/data/portfolio-data";
+import { ThemeProvider } from "@/providers/theme-provider";
 // @ts-ignore
 import "./globals.css";
-import { ThemeProvider } from "@/providers/theme-provider";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,35 +18,29 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: '#000000',
-  width: 'device-width',
+  themeColor: "#000000",
+  width: "device-width",
   initialScale: 1,
 };
 
-/* --- GLOBAL SEO (Root Metadata) --- */
 export const metadata: Metadata = {
   title: {
     default: "Pankaj Verma | ivpankaj",
     template: "%s | Pankaj Verma",
   },
-  description:
-    "Official portfolio of Pankaj Verma (ivpankaj) — Computer Science Engineer & MERN Stack Developer. Exploring software engineering, full-stack development, and AI.",
+  manifest: "/manifest.webmanifest",
+  description: `Official portfolio of Pankaj Verma (ivpankaj) featuring ${portfolioCounts.current} current works across landing pages, dashboards, and product builds, plus ${portfolioCounts.upcoming} upcoming ideas.`,
   keywords: [
     "Pankaj Verma",
     "ivpankaj",
-    "Pankaj",
-    "pankaj",
     "software developer",
-    "best software developer in Noida",
-    "best software developer in Greater Noida",
-    "mern developer in Noida",
-    "software engineer Noida",
     "portfolio",
-    "full stack developer",
-    "computer science engineer",
-    "web development Greater Noida",
-    "next.js developer",
-    "react developer",
+    "landing pages",
+    "dashboard development",
+    "product builds",
+    "web development Noida",
+    "Next.js developer",
+    "React developer",
   ],
   metadataBase: new URL("https://ivpankaj.online"),
   alternates: {
@@ -56,8 +51,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Pankaj Verma | ivpankaj",
-    description:
-      "Portfolio of Pankaj Verma — MERN Stack Developer & Computer Science Engineer. View my projects, skills, and experience.",
+    description: `Portfolio of Pankaj Verma with ${portfolioCounts.current} current works across landing pages, dashboards, and product builds.`,
     url: "https://ivpankaj.online",
     siteName: "ivpankaj",
     locale: "en_US",
@@ -67,15 +61,14 @@ export const metadata: Metadata = {
         url: "/ivpankaj.png",
         width: 1200,
         height: 630,
-        alt: "Pankaj Verma - Portfolio",
+        alt: "Pankaj Verma portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pankaj Verma | ivpankaj",
-    description:
-      "Portfolio of Pankaj Verma — MERN Stack Developer & Computer Science Engineer.",
+    description: `Portfolio of Pankaj Verma with ${portfolioCounts.current} current works and ${portfolioCounts.upcoming} upcoming builds.`,
     creator: "@ivpankaj",
     images: ["/ivpankaj.png"],
   },
@@ -83,7 +76,7 @@ export const metadata: Metadata = {
     google: [
       "HkYS3evi3jqymwePJIQD6Ym4GZGNKhG28ZPB_K1ZfsY",
       "4G0C327upPlSMGFxrsmDaYGpYEF3UehJwpMzO8SYrVI",
-      "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U"
+      "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U",
     ],
   },
   robots: {
@@ -110,9 +103,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html
       lang="en"
@@ -124,7 +117,6 @@ export default function RootLayout({
       </head>
 
       <body className="antialiased">
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-L1YYQDVVHB"
           strategy="afterInteractive"
@@ -153,7 +145,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -163,21 +154,21 @@ export default function RootLayout({
               name: "Pankaj Verma",
               alternateName: ["ivpankaj", "ivpankaj.online", "Pankaj"],
               description:
-                "Best Software Developer in Noida & Greater Noida — Portfolio of Pankaj Verma (ivpankaj), a MERN Stack Developer & Computer Science Engineer.",
+                "Portfolio of Pankaj Verma focused on landing pages, dashboards, and product builds.",
               url: "https://ivpankaj.online",
               jobTitle: "Software Developer",
               knowsAbout: [
                 "Software Engineering",
-                "MERN Stack",
-                "React",
+                "Landing Pages",
+                "Dashboards",
                 "Next.js",
-                "AI",
+                "React",
               ],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Noida",
                 addressRegion: "Uttar Pradesh",
-                addressCountry: "India"
+                addressCountry: "India",
               },
               sameAs: [
                 "https://instagram.com/ivpankaj",

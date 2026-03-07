@@ -1,3 +1,5 @@
+import { portfolioCounts, portfolioGroupCounts } from "./portfolio-data";
+
   export const options = [
     { label: 'About', link: '/about' },
     { label: 'Services', link: '/services' },
@@ -35,9 +37,9 @@
 
   // Stats data
   export const stats = [
-    { label: "Happy Clients", value: "2,500+" },
-    { label: "Projects Completed", value: "1,200+" },
-    { label: "Support Hours", value: "24/7" },
-    { label: "Team Members", value: "50+" }
+    { label: "Current Projects", value: String(portfolioCounts.current) },
+    { label: "Upcoming Builds", value: String(portfolioCounts.upcoming) },
+    { label: "Landing Pages", value: String(portfolioGroupCounts.landingPages) },
+    { label: "Dashboard", value: String(portfolioGroupCounts.dashboard) }
   ];
 

@@ -3,132 +3,150 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-    Code2,
-    Smartphone,
-    Globe,
-    Cpu,
-    ShieldCheck,
-    Rocket,
-    ArrowRight,
-    Search,
-    Zap,
-    Layers
+  ArrowRight,
+  Blocks,
+  BriefcaseBusiness,
+  LayoutTemplate,
+  PanelsTopLeft,
 } from "lucide-react";
+import { portfolioCounts, portfolioGroupCounts } from "@/data/portfolio-data";
 
 const services = [
-    {
-        title: "SYSTEM ARCHITECTURE",
-        description: "Designing high-availability autonomous ecosystems using Next.js, distributed microservices, and neural-optimized data streams.",
-        icon: <Layers size={32} />,
-        features: ["Edge Optimization", "Semantic Indexing", "Real-time State Sync"]
-    },
-    {
-        title: "MOBILE INTERFACE",
-        description: "Engineering cross-platform mobile environments with React Native, focusing on biometric integration and sub-second interaction speed.",
-        icon: <Smartphone size={32} />,
-        features: ["Native Bridge Logic", "Deterministic UI", "Atomic Components"]
-    },
-    {
-        title: "CORE ENGINEERING",
-        description: "Full-cycle system development from vector database orchestration to high-performance API synthesis.",
-        icon: <Cpu size={32} />,
-        features: ["GraphQL Mesh", "Event-Driven IO", "Schema Evolution"]
-    },
-    {
-        title: "CLOUD INFRA",
-        description: "Orchestrating serverless compute clusters on AWS and Firebase with autonomous CI/CD pipelines and zero-trust security.",
-        icon: <Zap size={32} />,
-        features: ["Auto-scaling Mesh", "Encryption at REST", "Logic Isolation"]
-    }
+  {
+    title: "Landing Pages",
+    description:
+      "Marketing and business-facing pages built to present a brand clearly, explain the offer, and collect leads without clutter.",
+    icon: <LayoutTemplate size={32} />,
+    features: ["Brand positioning", "Responsive sections", "Conversion-focused layout"],
+  },
+  {
+    title: "Dashboards",
+    description:
+      "Internal panels and control surfaces that bring actions, tracking, and daily workflow visibility into one easy interface.",
+    icon: <PanelsTopLeft size={32} />,
+    features: ["Admin views", "Workflow clarity", "Quick-access actions"],
+  },
+  {
+    title: "Product Builds",
+    description:
+      "Web product interfaces for tools, service platforms, AI concepts, and niche business ideas that need a usable frontend.",
+    icon: <Blocks size={32} />,
+    features: ["Product UI", "Feature organization", "Scalable component structure"],
+  },
+  {
+    title: "Portfolio Refreshes",
+    description:
+      "Visual and content updates for personal brands or business websites that need sharper copy, cleaner layout, and a better first impression.",
+    icon: <BriefcaseBusiness size={32} />,
+    features: ["Copy cleanup", "Visual polish", "Content restructuring"],
+  },
 ];
 
 export const ModernServices = () => {
-    return (
-        <div className="min-h-screen bg-white text-black pb-32 px-6">
-            <div className="max-w-7xl mx-auto">
-                {/* Header Sub-section */}
-                <div className="mb-32">
-                    <span className="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400 mb-8 block">Operational Domains</span>
-                    <motion.h1
-                        initial={{ opacity: 0, scale: 0.98 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="text-6xl md:text-9xl font-black mb-10 tracking-tighter leading-none"
-                    >
-                        SERVICE <br /> <span className="text-gray-200">MATRIX</span>
-                    </motion.h1>
-                    <p className="text-gray-400 text-xl font-light max-w-2xl leading-relaxed tracking-tight">
-                        Initializing specialized protocols for high-capacity digital transformation and
-                        <span className="text-black font-semibold uppercase ml-1">autonomous system integration</span>.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: index * 0.1 }}
-                            className="group p-12 bg-gray-50/50 border border-black/[0.03] rounded-[56px] hover:bg-black hover:text-white transition-all duration-700 flex flex-col justify-between"
-                        >
-                            <div>
-                                <div className="mb-10 p-5 bg-white rounded-2xl w-fit text-black shadow-sm group-hover:bg-white/10 group-hover:text-white transition-colors duration-500">
-                                    {service.icon}
-                                </div>
-
-                                <h2 className="text-3xl font-black mb-6 tracking-tighter uppercase">
-                                    {service.title}
-                                </h2>
-
-                                <p className="text-gray-400 text-lg mb-12 leading-relaxed font-light group-hover:text-gray-300 transition-colors">
-                                    {service.description}
-                                </p>
-
-                                <div className="grid grid-cols-1 gap-4">
-                                    {service.features.map((f) => (
-                                        <div key={f} className="flex items-center gap-4 text-[10px] font-black uppercase tracking-[3px]">
-                                            <div className="w-2 h-px bg-black group-hover:bg-white transition-colors shadow-[0_0_8px_rgba(0,0,0,1)] group-hover:shadow-[0_0_8px_rgba(255,255,255,1)]" />
-                                            {f}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="mt-20 pt-10 border-t border-black/[0.03] group-hover:border-white/10 flex items-center justify-between">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-gray-300">Protocol {index + 1}</span>
-                                <button className="flex items-center gap-3 text-xs font-black uppercase tracking-widest group/btn">
-                                    INITIATE <ArrowRight size={16} className="group-hover/btn:translate-x-2 transition-transform" />
-                                </button>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Integration Protocol */}
-                <div className="mt-60 rounded-[64px] bg-black p-12 md:p-24 text-white overflow-hidden relative">
-                    <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
-                        <div className="max-w-2xl">
-                            <h3 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">
-                                READY TO <br /> SYNC?
-                            </h3>
-                            <p className="text-gray-400 text-xl font-light leading-relaxed">
-                                Join the network and deploy your next high-performance digital ecosystem with autonomous precision.
-                            </p>
-                        </div>
-                        <motion.a
-                            href="/contact"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-12 py-6 bg-white text-black font-black text-xs uppercase tracking-[0.3em] rounded-3xl shadow-2xl hover:bg-gray-100 transition-all text-center whitespace-nowrap"
-                        >
-                            Open Connection
-                        </motion.a>
-                    </div>
-                    {/* Background Light Effect */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[160px] pointer-events-none" />
-                </div>
-            </div>
+  return (
+    <div className="min-h-screen bg-white px-6 pb-32 text-black">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-24">
+          <span className="mb-8 block text-[10px] font-black uppercase tracking-[0.5em] text-gray-400">
+            Service Areas
+          </span>
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="mb-8 text-6xl font-black leading-none tracking-tighter md:text-8xl"
+          >
+            WHAT I
+            <span className="block text-gray-200">BUILD</span>
+          </motion.h1>
+          <p className="max-w-3xl text-xl font-light leading-relaxed tracking-tight text-gray-500">
+            Most of the current portfolio sits across{" "}
+            <span className="font-semibold text-black">
+              {portfolioGroupCounts.landingPages} landing pages
+            </span>
+            ,{" "}
+            <span className="font-semibold text-black">
+              {portfolioGroupCounts.dashboard} dashboard
+            </span>
+            , and{" "}
+            <span className="font-semibold text-black">
+              {portfolioGroupCounts.projects} product builds
+            </span>
+            . That mix shapes how I approach new client work and personal
+            experiments.
+          </p>
         </div>
-    );
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {services.map((service, index) => (
+            <motion.article
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.08 }}
+              className="group flex h-full flex-col justify-between rounded-[40px] border border-black/[0.05] bg-gray-50/70 p-10 transition-all duration-500 hover:bg-black hover:text-white"
+            >
+              <div>
+                <div className="mb-8 w-fit rounded-2xl bg-white p-4 text-black shadow-sm transition-colors duration-500 group-hover:bg-white/10 group-hover:text-white">
+                  {service.icon}
+                </div>
+
+                <h2 className="mb-5 text-3xl font-black tracking-tight">
+                  {service.title}
+                </h2>
+
+                <p className="mb-10 text-lg font-light leading-relaxed text-gray-500 transition-colors duration-500 group-hover:text-gray-300">
+                  {service.description}
+                </p>
+
+                <div className="grid gap-3">
+                  {service.features.map((feature) => (
+                    <div
+                      key={feature}
+                      className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.28em]"
+                    >
+                      <div className="h-px w-4 bg-current" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        <div className="relative mt-24 overflow-hidden rounded-[48px] bg-black p-12 text-white md:p-20">
+          <div className="relative z-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-[10px] font-black uppercase tracking-[0.35em] text-gray-400">
+                Current Snapshot
+              </p>
+              <h3 className="mt-5 text-4xl font-black tracking-tight md:text-6xl">
+                {portfolioCounts.current} live works.
+                <span className="block text-gray-500">
+                  {portfolioCounts.upcoming} more on the way.
+                </span>
+              </h3>
+              <p className="mt-6 text-lg font-light leading-relaxed text-gray-400">
+                If you need a landing page, a dashboard, or a web product that
+                looks clean and reads clearly, this portfolio is already moving
+                in that direction.
+              </p>
+            </div>
+
+            <motion.a
+              href="/contact"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex w-fit items-center gap-3 rounded-2xl bg-white px-8 py-4 text-xs font-black uppercase tracking-[0.3em] text-black transition-all hover:bg-gray-100"
+            >
+              Start a Project
+              <ArrowRight size={16} />
+            </motion.a>
+          </div>
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-[180px]" />
+        </div>
+      </div>
+    </div>
+  );
 };

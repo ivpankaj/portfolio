@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/predev.cjs",
     "dev": "next dev --turbopack",
+    "predev:plain": "node scripts/predev.cjs",
+    "dev:plain": "next dev",
     "build": "next build",
     "export": "next export",
     "postbuild": "next-sitemap",

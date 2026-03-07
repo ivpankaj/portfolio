@@ -1,45 +1,58 @@
+import type { Metadata } from "next";
 import MainLayout from "@/components/MainLayout";
-import React from "react";
-import { Metadata } from "next";
-import { ModernHero } from "@/components/ModernHero";
-import { TechMarquee } from "@/components/TechMarquee";
-import { BentoSkills } from "@/components/BentoSkills";
-import { WorkHighlight } from "@/components/WorkHighlight";
 import { ModernContact } from "@/components/ModernContact";
+import { ModernHero } from "@/components/ModernHero";
+import { PortfolioCollections } from "@/components/PortfolioCollections";
+import { TechMarquee } from "@/components/TechMarquee";
+import { WorkHighlight } from "@/components/WorkHighlight";
+import { portfolioCounts } from "@/data/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Pankaj Verma | Modern Software Developer & Engineer",
-  description: "Experience the next level of digital craft. Portfolio of Pankaj Verma (ivpankaj), specializing in modern web architecture, AI, and premium user experiences.",
-  keywords: ["Pankaj Verma", "ivpankaj", "Modern Portfolio", "Tech Portfolio", "Full Stack Developer", "AI Engineer", "Software Developer Noida"],
+  title: "Pankaj Verma | Landing Pages, Dashboards, and Product Builds",
+  description: `Portfolio of Pankaj Verma featuring ${portfolioCounts.current} current works across landing pages, dashboard interfaces, and product builds, with ${portfolioCounts.upcoming} upcoming ideas in progress.`,
+  keywords: [
+    "Pankaj Verma",
+    "ivpankaj",
+    "Portfolio",
+    "Landing Pages",
+    "Dashboard Development",
+    "Product UI",
+    "Software Developer Noida",
+  ],
   alternates: {
     canonical: "https://ivpankaj.online/",
   },
   openGraph: {
-    title: "Pankaj Verma | Modern Software Developer & Engineer",
-    description: "Experience the next level of digital craft. Portfolio of Pankaj Verma (ivpankaj), specializing in modern web architecture, AI, and premium user experiences.",
+    title: "Pankaj Verma | Landing Pages, Dashboards, and Product Builds",
+    description: `Portfolio of Pankaj Verma featuring ${portfolioCounts.current} current works and ${portfolioCounts.upcoming} upcoming builds.`,
     url: "https://ivpankaj.online/",
-    images: [{ url: "/ivpankaj.png", width: 1200, height: 630, alt: "Pankaj Verma - Portfolio" }],
+    images: [
+      {
+        url: "/ivpankaj.png",
+        width: 1200,
+        height: 630,
+        alt: "Pankaj Verma portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pankaj Verma | Modern Software Developer & Engineer",
-    description: "Experience the next level of digital craft. Portfolio of Pankaj Verma (ivpankaj).",
+    title: "Pankaj Verma | Landing Pages, Dashboards, and Product Builds",
+    description: `Portfolio of Pankaj Verma featuring ${portfolioCounts.current} current works.`,
     images: ["/ivpankaj.png"],
   },
 };
 
-const Page = () => {
+export default function Page() {
   return (
     <MainLayout>
-      <div className="bg-white min-h-screen">
+      <div className="min-h-screen bg-white">
         <ModernHero />
         <TechMarquee />
-        <BentoSkills />
+        <PortfolioCollections />
         <WorkHighlight />
         <ModernContact />
       </div>
     </MainLayout>
   );
-};
-
-export default Page;
+}

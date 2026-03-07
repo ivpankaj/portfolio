@@ -1,24 +1,39 @@
+import type { Metadata } from "next";
 import MainLayout from "@/components/MainLayout";
 import { ModernAbout } from "@/components/ModernAbout";
 
-export const metadata = {
-  title: "About | Pankaj Verma - Modern Software Architect",
+export const metadata: Metadata = {
+  title: "About | Pankaj Verma",
   description:
-    "Learn more about the engineering mindset of Pankaj Verma (ivpankaj) — A specialist in high-performance web applications and scalable digital solutions.",
-  keywords: ["About Pankaj Verma", "ivpankaj biography", "Software Architect Noida", "MERN Stack Professional"],
+    "Learn more about Pankaj Verma, a developer focused on building landing pages, dashboards, and product interfaces with clear structure and clean execution.",
+  keywords: [
+    "About Pankaj Verma",
+    "ivpankaj biography",
+    "Software Developer Noida",
+    "Portfolio Developer",
+  ],
   alternates: {
     canonical: "https://ivpankaj.online/about",
   },
   openGraph: {
-    title: "About | Pankaj Verma - Modern Software Architect",
-    description: "Learn more about the engineering mindset of Pankaj Verma (ivpankaj) — A specialist in high-performance web applications.",
+    title: "About | Pankaj Verma",
+    description:
+      "Learn more about Pankaj Verma and the kind of web work behind this portfolio.",
     url: "https://ivpankaj.online/about",
-    images: [{ url: "/ivpankaj.png", width: 1200, height: 630, alt: "Pankaj Verma - About" }],
+    images: [
+      {
+        url: "/ivpankaj.png",
+        width: 1200,
+        height: 630,
+        alt: "Pankaj Verma about",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "About | Pankaj Verma",
-    description: "Learn more about the engineering mindset of Pankaj Verma (ivpankaj).",
+    description:
+      "Learn more about Pankaj Verma and the work behind this portfolio.",
     images: ["/ivpankaj.png"],
   },
 };
