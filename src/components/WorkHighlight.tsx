@@ -13,7 +13,7 @@ import {
 
 export const WorkHighlight = () => {
   return (
-    <section className="bg-white px-6 py-32">
+    <section className="bg-white px-6 py-16 md:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="mb-20 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">

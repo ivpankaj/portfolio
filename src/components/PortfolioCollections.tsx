@@ -58,16 +58,16 @@ const groupMeta: Record<
 
 export const PortfolioCollections = () => {
   return (
-    <section className="bg-[#f6f3ee] px-6 py-28">
+    <section className="bg-[#f6f3ee] px-6 py-16 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <span className="mb-4 block text-xs font-black uppercase tracking-[0.35em] text-gray-400">
               Portfolio Breakdown
             </span>
-            <h2 className="text-5xl font-black tracking-tight text-black md:text-7xl">
+            <h2 className="text-5xl font-black leading-[1.1] md:leading-none tracking-tight text-black md:text-7xl">
               WHAT IS
-              <span className="block text-gray-300">INSIDE HERE</span>
+              <span className="block text-gray-300 mt-2 md:mt-0">INSIDE HERE</span>
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-gray-500">
@@ -88,7 +88,7 @@ export const PortfolioCollections = () => {
             <span className="text-[10px] font-black uppercase tracking-[0.35em] text-white/45">
               Archive Snapshot
             </span>
-            <h3 className="mt-5 text-4xl font-black leading-tight tracking-tight md:text-5xl">
+            <h3 className="mt-5 text-4xl font-black leading-[1.1] md:leading-tight tracking-tight md:text-5xl">
               {portfolioCounts.current} current works.
               <span className="mt-2 block text-white/35">
                 {portfolioCounts.upcoming} upcoming ideas.
@@ -101,7 +101,7 @@ export const PortfolioCollections = () => {
               understanding of what you have already built.
             </p>
 
-            <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { label: "Sections", value: groupedPortfolioItems.length },
                 { label: "Current", value: portfolioCounts.current },

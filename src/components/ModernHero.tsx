@@ -36,7 +36,7 @@ const workLabels = [
 
 export const ModernHero = () => {
   return (
-    <div className="relative flex min-h-[95vh] items-center justify-center overflow-hidden bg-white text-black">
+    <div className="relative flex min-h-[100svh] md:min-h-[95vh] items-center justify-center overflow-hidden bg-white text-black">
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -91,7 +91,7 @@ export const ModernHero = () => {
             Portfolio Refresh
           </span>
 
-          <h1 className="mb-8 text-[clamp(4rem,12vw,12rem)] font-black leading-[0.85] tracking-tighter text-black">
+          <h1 className="mb-8 text-[clamp(4rem,12vw,12rem)] font-black leading-[0.95] md:leading-[0.85] tracking-tighter text-black">
             PANKAJ <br />
             <span className="uppercase text-gray-200">VERMA</span>
           </h1>

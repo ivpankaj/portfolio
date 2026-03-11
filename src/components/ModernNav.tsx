@@ -39,7 +39,7 @@ export const ModernNav = () => {
         `}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 pl-4">
-                      
+
                         <span className="font-bold text-xl tracking-tighter text-black uppercase">Pankaj</span>
                     </Link>
 
@@ -69,7 +69,7 @@ export const ModernNav = () => {
                         </div>
                         <Link
                             href="/contact"
-                            className="px-6 py-2.5 bg-black text-white text-xs font-black uppercase tracking-widest rounded-xl hover:bg-gray-800 transition-all shadow-xl shadow-black/10"
+                            className="px-4 md:px-6 py-2 md:py-2.5 bg-black text-white text-[10px] md:text-xs font-black uppercase tracking-widest rounded-xl hover:bg-gray-800 transition-all shadow-xl shadow-black/10 whitespace-nowrap"
                         >
                             Connect
                         </Link>

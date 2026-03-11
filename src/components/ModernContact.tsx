@@ -55,20 +55,20 @@ export const ModernContact = () => {
   };
 
   return (
-    <section className="bg-white px-6 pb-24" id="contact">
+    <section className="bg-white px-6 pb-16 md:pb-24" id="contact">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-stretch gap-20 lg:flex-row">
           <div className="flex-1">
             <span className="mb-8 block text-[10px] font-black uppercase tracking-[0.5em] text-gray-400">
               Contact
             </span>
-            <h2 className="mb-12 text-6xl font-black uppercase leading-[0.9] tracking-tighter text-black md:text-8xl">
+            <h2 className="mb-12 text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-[1.05] md:leading-[0.9] tracking-tighter text-black">
               READY TO
-              <br />
-              <span className="bg-gradient-to-br from-gray-200 to-gray-400 bg-clip-text text-transparent">
+              <br className="max-sm:hidden" />
+              <span className="bg-gradient-to-br from-gray-200 to-gray-400 bg-clip-text text-transparent sm:ml-0 inline-block mt-2 sm:mt-0">
                 BUILD
               </span>
-              <span className="ml-3 text-black">TOGETHER?</span>
+              <span className="max-sm:block sm:ml-3 text-black">TOGETHER?</span>
             </h2>
             <p className="mb-16 max-w-md text-xl font-light leading-relaxed text-gray-500">
               If you need a landing page, dashboard, portfolio refresh, or a
@@ -182,9 +182,8 @@ export const ModernContact = () => {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className={`flex w-full items-center justify-center gap-3 rounded-[32px] bg-black py-8 text-xs font-black uppercase tracking-[0.3em] text-white shadow-2xl shadow-black/10 transition-all hover:bg-gray-900 ${
-                    status === "loading" ? "cursor-not-allowed opacity-50" : ""
-                  }`}
+                  className={`flex w-full items-center justify-center gap-3 rounded-[32px] bg-black py-8 text-xs font-black uppercase tracking-[0.3em] text-white shadow-2xl shadow-black/10 transition-all hover:bg-gray-900 ${status === "loading" ? "cursor-not-allowed opacity-50" : ""
+                    }`}
                 >
                   {status === "loading" ? "Sending..." : (
                     <>
